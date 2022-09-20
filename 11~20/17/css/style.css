@@ -1,0 +1,11 @@
+h1{
+  width: 300px;
+  background-color: aqua;
+}
+span{
+  display: block;
+  background-color: red;
+}
+button{
+  width: 300px;
+}

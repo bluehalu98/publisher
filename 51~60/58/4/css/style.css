@@ -1,0 +1,104 @@
+/* stlye guide
+*{
+  color: inherit;  상속받아라(reset css에 포함)
+}
+나눔체, 노토(선생님 선호!), 맑은고딕, ..... 
+serif : 꺽이는 글자(디자인성)
+sans serif : 꺽이지 않는 글자(가독성)
+노토 산스 폰트
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+font-family: 'Noto Sans KR', sans-serif;
+
+나눔고딕 폰트
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+font-family: 'Nanum Gothic', sans-serif;
+
+montserrat 영어 폰트
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+font-family: 'Montserrat', sans-serif;
+
+raleway 폰트
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+font-family: 'Raleway', sans-serif;
+
+fontsawesome
+<script src="https://kit.fontawesome.com/5c078cf8a0.js" crossorigin="anonymous"></script>
+폰트 링크는 최상단에 권장, 최소 style css링크보다 상단에 위치해야 사용가능
+*/
+:root{
+  /* 
+  document개념(최상위), 이곳에서 --를 이용해서 저장을해야 모든객체에서
+  값을 불러와서 사용가능
+  */
+  --main-color:#445678;
+}
+/*
+h1{
+  color:var(--main-color); root에서 매인컬러를 저장해놓고 호출 
+}
+*/
+body{
+  color: #333;
+  font-size: 14px;/* em은 16px의 배수인 단위, em은 다른 객체에게 줄경우 부모기준으로 배수를 단위로 갖는다 */
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 160%;/* reset에서 inherit를 쓸경우 중첩이 되기때문에 여기서만 설정 */
+  background-color: black;
+}
+section.container{
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: all 2s;
+}
+section.container section{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+}
+section.container section img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+section.container.active{
+  pointer-events: fill;
+}
+section.container.active-prev{
+  transform: scale(0.5);
+  opacity: 0;
+}
+@media (orientation:landscape){
+  section.container section.left{
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+  section.container section.right{
+    transform: translateX(50%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+}
+@media (orientation:portrait){
+  section.container section.top{
+    transform: translateY(-50%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  }
+  section.container section.bottom{
+    transform: translateY(50%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);  
+  }
+}
+section.container.active>section{
+  transform: translateX(0) translateY(0)
+}
+.scrollspy{
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  background-color: yellow;
+}

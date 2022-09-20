@@ -1,0 +1,72 @@
+@import 'mixin';
+section.page-around,
+section.page-facility{
+  ul{
+    li{
+      margin: 20px 0;
+      h3{
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: var(--dark-color);
+        border-bottom: 1px solid var(--main-color);
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 50px;
+          height: 2px;
+          background-color: var(--dark-color);
+        }
+      }//h3 
+      p{
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        border-left: 1px solid #ddd;
+        &::before{
+          content: '';
+          position: absolute;
+          left: -1px;
+          top:0;
+          width: 2px;
+          height: 45%;
+          background-color: #bbb;
+        }
+      }
+      figure{
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+        img{width: 100%;}
+      }
+    }
+  }
+}
+section.page-facility{
+  >ul{
+    >li{
+      >ul{
+        width: 100%;
+        margin: 0 auto 20px auto;
+        color: #DDD;
+        background-color: var(--dark-color);
+        padding: 5px;
+        >li{
+          margin: 10px 0;
+          text-align: center;
+          border-bottom: 1px dotted #fff;
+          @include icon-font(before, '\f071');
+          &::before{
+            margin-right: 5px;
+            color: var(--main-color);
+          }
+        }//2dep li
+      }//2dep ul
+    }//1dep li
+  }//1dep ul
+}//facility page
+

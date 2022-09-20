@@ -1,0 +1,44 @@
+div.mainDiv{
+  width: 1000px;
+  min-height: 500px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+div.mainDiv aside{
+  width: 250px;
+  background-color: #ccc;
+}
+fieldset{
+  border: none;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 230px;
+  height: 90px;
+  background-color: white;
+  color:black;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+div.mainDiv fieldset input{
+  flex: 0.5;
+}
+button#log{
+  border: 2px ridge rgb(153, 148, 148);
+  box-sizing: border-box;
+  flex: 1;
+  width: 50px;
+  line-height: 66px;
+  text-align: center;
+  margin-left: 8px;
+}
+main{
+  width: 740px;
+  background-color: #ccc;
+}
+main div.playground{
+  background-color: white;
+}

@@ -1,0 +1,20 @@
+.home-visual{
+  width: 1000px;
+  height: 300px;
+  margin: 10px auto;
+  background-color: #ddd;
+}
+.home-content{
+  width: 1000px;
+  margin: 10px auto;
+}
+.home-content ul{
+  display: flex;
+  justify-content: space-between;
+}
+.home-content ul li{
+  width: 32%;
+}
+.home-content ul li img{
+  width: 100%;
+}

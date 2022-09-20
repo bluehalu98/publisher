@@ -1,0 +1,21 @@
+.sub-visual{
+  width: 1000px;
+  height: 250px;
+  margin: 10px auto;
+  background-color: #ddd;
+}
+.sub-wrap{
+  width: 1000px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar{
+  width: 250px;
+  background-color: #ddd;
+}
+.sub-content{
+  width: 740px;
+  min-height: 400px;
+  background-color: #ddd;
+}

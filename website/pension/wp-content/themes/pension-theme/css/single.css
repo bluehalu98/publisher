@@ -1,0 +1,47 @@
+.post-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-top: 2px solid var(--main-color);
+}
+.post-metadata dt, .post-metadata dd {
+  box-sizing: border-box;
+  padding: 7px;
+  border-bottom: 1px solid #DDD;
+}
+.post-metadata dt {
+  width: 20%;
+  background: var(--dark-color);
+  text-align: center;
+  color: #FFF;
+}
+.post-metadata dd {
+  width: 80%;
+}
+
+.single-section img {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #EEE;
+  border: 1px solid #CCC;
+}
+.single-section p {
+  margin: 20px 0;
+}
+
+.post-nav {
+  padding-top: 10px;
+  text-align: center;
+  border-top: 1px solid #CCC;
+}
+.post-nav a {
+  margin: 0 5px;
+  font-size: 1.2em;
+  color: var(--dark-color);
+}
+.post-nav a:hover {
+  color: var(--main-color);
+}/*# sourceMappingURL=single.css.map */

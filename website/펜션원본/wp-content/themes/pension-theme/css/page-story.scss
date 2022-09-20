@@ -1,0 +1,34 @@
+@import './mixin';
+
+section.visual-story{
+  margin-bottom: 30px;
+  padding: 7px;
+  background-color: rgb(155,202,229);
+  border: 1px solid #ccc;
+  figure{
+    border: 1px solid #ccc;
+    background-image: url(../img/sub1/sub1-1.jpg);
+    filter: url(#filter);
+    img{
+      width: 100%;
+      opacity: 0;
+    }
+  }
+}
+section.greet-story{
+  h3{
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--main-color);
+    font-size: 1.15em;
+    font-weight: bold;
+    color: var(--main-color);
+    i{
+      transform: scaleX(-1);
+    }
+  }
+  p{
+    padding: 20px;
+    background: linear-gradient(rgba(#f9bf26,.3),rgba(#f9bf26,0));
+    color: var(--dark-color);
+  }
+}

@@ -1,0 +1,146 @@
+@media screen and (min-width: 900px) {
+  .wpcf7 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wpcf7 form p {
+    width: 100%;
+  }
+  .wpcf7 form p:nth-of-type(1) {
+    width: 45%;
+  }
+  .wpcf7 form p:nth-of-type(1) > label {
+    width: 20% !important;
+  }
+  .wpcf7 form p:nth-of-type(1) > span {
+    width: 78% !important;
+  }
+  .wpcf7 form p:nth-of-type(2) {
+    width: 45%;
+  }
+  .wpcf7 form p:nth-of-type(2) > label {
+    width: 20% !important;
+  }
+  .wpcf7 form p:nth-of-type(2) > span {
+    width: 78% !important;
+  }
+  .wpcf7 form p:nth-of-type(3) {
+    width: 45%;
+  }
+  .wpcf7 form p:nth-of-type(3) > label {
+    width: 20% !important;
+  }
+  .wpcf7 form p:nth-of-type(3) > span {
+    width: 78% !important;
+  }
+  .wpcf7 form p:nth-of-type(4) {
+    width: 45%;
+  }
+  .wpcf7 form p:nth-of-type(4) > label {
+    width: 20% !important;
+  }
+  .wpcf7 form p:nth-of-type(4) > span {
+    width: 78% !important;
+  }
+  .wpcf7 form p:nth-of-type(5) {
+    width: 45%;
+  }
+  .wpcf7 form p:nth-of-type(5) > label {
+    width: 20% !important;
+  }
+  .wpcf7 form p:nth-of-type(5) > span {
+    width: 78% !important;
+  }
+  .wpcf7 form p:nth-of-type(6) {
+    width: 45%;
+  }
+  .wpcf7 form p:nth-of-type(6) > label {
+    width: 20% !important;
+  }
+  .wpcf7 form p:nth-of-type(6) > span {
+    width: 78% !important;
+  }
+  .wpcf7 form p > label {
+    width: 8% !important;
+  }
+  .wpcf7 form p > span {
+    width: 90% !important;
+  }
+}
+.wpcf7 form p {
+  padding: 7px 0;
+}
+@media screen and (min-width: 600px) {
+  .wpcf7 form p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wpcf7 form p > label {
+    width: 23%;
+  }
+  .wpcf7 form p > span {
+    width: 74%;
+  }
+}
+.wpcf7 form p br {
+  display: none;
+}
+.wpcf7 form p > label {
+  font-weight: 900;
+  color: var(--dark-color);
+}
+@media screen and (max-width: 600px) {
+  .wpcf7 form p > label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.wpcf7 form p > label.must {
+  position: relative;
+}
+.wpcf7 form p > label.must::before {
+  content: "\f303";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.wpcf7 form p > label.must::before {
+  position: absolute;
+  color: var(--dark-color);
+  left: -15px;
+  top: -5px;
+  font-size: 0.85em;
+}
+.wpcf7 form p > span > input, .wpcf7 form p > span > textarea, .wpcf7 form p > span > select {
+  width: 100%;
+  padding: 5px;
+}
+.wpcf7 form p > span > span label {
+  display: block;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.wpcf7 form p input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  border: none;
+  background-color: var(--dark-color);
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #fff;
+}
+.wpcf7 form p .wpcf7-spinner {
+  display: none;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,16 @@
+css와 js 파일이 둘다 필요함
+load이벤트 안에서 호출!
+  $(window).load(function(){
+    $('#page3-3-gallery').justifiedGallery({
+      rowHeight : 150,
+      lastRow : 'nojustify',
+      margins : 3,
+  });
+  })
+<div>
+	<a href="#" title="Lorem Ipsum is simply dummy text">
+      		<img src="" alt="">
+	</a>
+</div>
+
+a안에 title속성을 줄시 호버할때 나옴

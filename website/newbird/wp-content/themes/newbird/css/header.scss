@@ -1,0 +1,278 @@
+@import 'mixin';
+#wpadminbar{display: none;}
+html#html{margin-top: 0 !important;}
+.site-header{
+  position: fixed;
+  z-index: 100;
+  left: 2.5%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s;
+  @media screen and (min-width:1000px) { 
+    top: 55px;
+  }//header lg
+  @media screen and (max-width:1000px) {
+    top: 30px; 
+  }//header sm
+  h1{
+    a{
+      display: block;
+      width: 180px;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--dark-color);
+
+      sup{
+        display: inline-block;//자식이 block레벨이면 인라인레벨을 무시하고 블록레벨의 조상객체를 찾아서 넓이를 갖는다
+        @include underbar;
+        span{
+          display: inline-block;
+          padding-right: 3px;
+        }//span
+        &.active::after{
+          background-color: #fff;
+        }
+      }//sup
+      em{
+        font-size: 25px; 
+        span{
+          display: inline-block;
+          padding-right: 3px;
+        }
+      }//b
+    }//a
+    sup span:not(.first-letter), em span:not(.first-letter){
+      transition: all 0.3s;
+      max-width: 100px;
+      vertical-align: top;
+      @media screen and (max-width:1000px) {
+        max-width: 0;
+        overflow: hidden;
+        padding-right: 0;
+      }
+    }
+  }//h1
+  .mbtn{
+    position: relative;
+    width: 40px; 
+    height: 40px;
+    @media screen and (min-width:1000px) {display:none;}
+    span{
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      top: 18px;
+      left: 0;
+      background-color: var(--dark-color);
+      transition: all 0.3s;
+      &.bar1{transform:translateY(-7px)}
+      &.bar3{transform:translateY(7px)}
+    }//span
+    &.active{
+      span{
+        &.bar1{transform: translateY(0) rotate(45deg);}
+        &.bar3{transform: translateY(0) rotate(-45deg);}
+        &.bar2{opacity: 0;}
+      }
+    }
+  }//mbtn
+}//site-header
+
+.gnb-lg{
+  div ul{
+    display: flex;
+    li{
+      margin: 0 4px;
+      a{
+        padding: 3px 5px;
+        font-weight: 900;
+        font-size: 1em;
+        color: var(--dark-color);
+        @include underbar;
+        &::after{
+          width: 0;
+          transition: width 0.5s;
+        }
+        &:hover::after{width: 100%;}
+        &[aria-current]{
+          padding: 3px 10px;
+          width: 100%;
+          font-size: 0.9em;
+          background-color: var(--dark-color);
+          color: var(--main-color);
+        }
+        &[aria-current]::after{
+          width: 100%;
+          display: none !important;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:1000px) {
+    display: none;
+  }
+}//gnb lg
+.gnb-sm{
+  display: none;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  left: 0;top: 0;
+  background-color: rgba(255,243,37,0.8);
+  transform: translateX(100%);
+  transition: all 0.5s;
+  &.active{
+    transform: translate(0%);
+  }
+  @media screen and (min-width:1000px) {
+    display: none !important;
+  }
+  div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    ul{
+      li{
+        margin: 20px 0;
+        a{
+          display: block;
+          text-align: center;
+          font-size: 1.3em;
+          font-weight: bold;
+          color: var(--dark-color);
+          &[aria-current]{
+            @include underbar;
+            &::after{
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }//ul
+  }//div
+}//gnb sm
+$icons:('\f015','\f1ad','\f542','\f0e0','\f07c');
+.gnb{
+  @each $v in $icons {
+    $i : index($icons, $v);
+    li:nth-child(#{$i}) a{
+      @include icon-font(before,$v);
+      &::before{
+        font-size: 0.8em;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+
+.contact-links{
+  position: fixed;
+  z-index: 98;
+  left:2.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  li{
+    margin: 30px 0;
+    font-size: 1.2em;
+    color: var(--dark-color);
+    transition: all 0.5s;
+    a:hover{
+      color: var(--main-color);
+      text-shadow: 0 0 10px rgba(black, 0.5);
+    }
+  }
+}//contact link
+
+.tel{
+  position: fixed;
+  z-index: 98;
+  right: 2.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  &:hover{
+    span{
+      transform: translateX(-50%);
+    }
+  }
+  div{
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px auto;
+    span{
+      display: block;
+      width: 200%;
+      height: 100%;
+      transition: all 0.3s;
+      i{
+        float: left;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child{
+          background-color: var(--main-color);
+          color: var(--dark-color);  
+        }
+        &:last-child{
+          background-color: var(--dark-color);
+          color: var(--main-color);
+        }
+      }//i
+    }//span
+  }//div
+  @media screen and (min-width:1000px){
+    div{width: 60px;height: 60px;}
+  }//div lg
+  @media screen and (max-width:1000px){
+    div{width: 40px;height: 40px;}
+  }//div sm
+  small{
+    font-size: 0.85em;
+    color: var(--dark-color);
+    font-weight: bolds;
+  }
+  b{
+    font-size: 0.85em;
+    color: var(--dark-color);
+    font-weight: bold;
+  }
+}//tel
+.copy, .download-btn{
+  position: fixed;
+  z-index: 98;
+  bottom: 5%;
+  background-color: #fff;
+  padding: 7px 10px;
+  border-radius: 30px;
+  font-size: 0.8em;
+  color: var(--dark-color);
+}//copy, download btn
+.download-btn{
+  right: 2.5%;
+  transition: all 0.3s;
+  span{
+    margin-right: 5px;
+    b{font-weight: 900;}
+    @media screen and (max-width:1000px){
+      display: none;
+    }
+  }//span
+  &:hover{
+    background-color: var(--main-color);
+  }
+}//download btn
+.copy{
+  left: 2.5%;
+  b{font-weight: 900;}
+  @media screen and (max-width:1000px) {
+    transform-origin: 15px center;
+    transform: rotate(-90deg);
+    opacity: .7;
+  }
+}

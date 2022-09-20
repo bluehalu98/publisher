@@ -1,0 +1,36 @@
+.page5-2-section > p{
+  margin-bottom: 30px;
+}
+.page5-2-section ul li *{
+  padding: 10px;
+}
+.page5-2-section ul li button{
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+}
+.page5-2-section ul li button.active{
+  color: var(--point-color);
+}
+.page5-2-section ul li p{
+  display: none;
+  background-color: var(--dark-color);
+  color: #fff;
+}
+/* counter (가상엘리먼트에만 사용가능) */
+.page5-2-section ul{counter-reset: section;}
+.page5-2-section ul li button::before{
+  counter-increment: section;
+  content: counter(section);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  margin-right:7px ;
+}
+.page5-2-section ul li button.active::before{background-color: var(--point-color);}

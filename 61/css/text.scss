@@ -1,0 +1,68 @@
+@import './common'; 
+body{
+  color: $main-color;
+}
+/* 
+:root{
+  --main-color:red;
+}
+body{
+  color:var(--main-color);
+}
+*/
+h1{
+  font-size: #{$size}px;
+  margin-bottom: 10px;
+}
+ul.desc{
+  li{
+    margin-left: 10px;
+    &::before{
+      content: '-';
+    }
+  }
+}
+.ex span{
+  @include icon-font(before, '\f0c9');
+}
+div.ex2{
+  margin: 50px 0;
+  text-align: center;
+  span{
+    display: inline-block;
+    animation: jump 1s infinite;
+    @for $i from 1 through 6{
+      &:nth-child(#{$i}){
+        animation-delay: #{($i - 1) * 0.2}s;
+      }
+    }
+  }
+}
+@keyframes jump{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(-300%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+.ex3{
+  text-align: center;
+  margin: 30px 0;
+  span{
+    $icons:(
+      1 : '\f573',
+      2 : '\f095',
+      3 : '\f1ac',
+      4 : '\f279'
+    );
+    @each $n , $icon in $icons{
+      &:nth-child(#{$n}){
+        @include icon-font(before,$icon)
+      }
+    }
+  }
+}

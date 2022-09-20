@@ -1,0 +1,44 @@
+ES6 
+array& object 
+  1.
+    1. for 구문 
+    2. 중첩 for 구문 defer, append, empty, remove
+    3. 중첩 for 구문 appendTo
+    4. 타이핑 효과, 텍스트 delay 효과
+    5. 파티클
+
+  2.
+    1. array(배열)
+    2. arr 뽑기 게임
+
+  3. for 복습
+
+  4. array 복습,arr 중복검사, 중첩arr table출력, 명단입력 후 table출력
+
+  5. 배열, 명단저장 및 출력구현
+
+  6. 배열의참조(refer), 얕은복사(shell copy), 깊은복사 (deep copy)
+
+  7. 배열을 이용한 십자말풀이
+
+  8. 객체
+
+  9. 숫자야구
+
+1. scope 
+
+2. 노드와 이벤트
+
+3. 함수(화살표 함수)와 리턴
+
+4. 스프레드 연산자 
+
+5. 비구조할당, 구조분해
+
+6. 모듈
+
+7. 비동기(promise then, await async)
+
+8. localstorage, json포맷형태(모든 프로그램언어에서 사용할 수 있는 변수)
+
+9. 

@@ -1,0 +1,14 @@
+404페이지제작
+
+
+스크롤 이벤트 예시
+function motion(){
+  var offsetTop = $('.el').offset().top + scrt
+}//fn
+motion()
+$(window).resize(function(){
+  motion()
+})
+$('main').scroll(function(){
+  motion()
+})//window

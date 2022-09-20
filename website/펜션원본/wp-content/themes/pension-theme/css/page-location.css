@@ -1,0 +1,25 @@
+section.page-location dl {
+  margin-bottom: 30px;
+}
+section.page-location dl dt {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--dark-color);
+  color: #fff;
+  border-radius: 5px;
+}
+section.page-location dl dt i {
+  margin-right: 10px;
+  color: var(--main-color);
+}
+section.page-location dl dd {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted #ddd;
+}
+section.page-location iframe {
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  border: 5px solid var(--main-color);
+}

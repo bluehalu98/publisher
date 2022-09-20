@@ -1,0 +1,210 @@
+@import "./mixin";
+.sub-wrap {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    flex-direction: row-reverse;
+  } //sub-wrap lg
+  .sub-visual {
+    background: #ff0;
+    @media screen and (min-width: 1000px) {
+      position: sticky;
+      top: 90px;
+      width: 35%;
+    } //sub-visaul lg
+    /* sub-figure----------------------------------------------- */
+    .figure-container {
+      width: 100%;
+      height: 100%;
+      svg{display: none;}
+      figure {
+        display: none;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transform: scale(1.1);
+          filter:url(#filter) brightness(70%);
+        } //img
+        figcaption {
+          position: absolute;
+          @media screen and (min-width: 1000px) {
+            width: 70%;
+            right: 5%;
+            bottom: 15%;
+            text-align: right;
+          } //lg
+          @media screen and (max-width: 1000px) {
+            width: 80%;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+          } //sm
+          h5{
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            color:#FFF;
+            font-weight: 600;
+            @media screen and (min-width: 1000px) {
+              font-size: 2.5em;
+            } //lg
+            @media screen and (max-width: 1000px) {
+              font-size: 2em;
+            } //sm
+            @include icon-font(before,'\f10d');
+            @include icon-font(after,'\f10e');
+            &::before,&::after{
+              position: absolute;
+              font-size: 0.5em;
+            }//&::before,&::after
+            &::before{
+              left:0;top:0;
+            }
+            &::after{
+              right: 0; bottom: 0;
+            }
+          }//h5
+          p{
+            color:rgba(#FFF,0.7);
+          }//p
+        } //figcaption
+      }//figure
+    } //figure-container
+    /* aside menu----------------------------------------------- */
+    .sub-sidebar {
+      position: absolute;
+      background: var(--dark-color);
+      width: 70px;
+      height: 260px;
+      top: 0;
+      left: 0%;
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        background: var(--main-color);
+      } //text
+      .snb-btn {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        @include barBtn(#fff, "SNB", "CLOSE");
+      }
+      .mouse {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        color: rgba(#fff, 0.8);
+        animation: updown 1s infinite;
+        @keyframes updown {
+          0% {
+            top: 42%;
+            opacity: 1;
+          }
+          100% {
+            top: 52%;
+            opacity: 0.2;
+          }
+        }
+      } //mouse
+      .snb {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 200px;
+        background: #fff;
+        border-radius: 0 5px 5px 0;
+        > div {
+          > ul {
+            > li {
+              display: none;
+              &.current-menu-parent {
+                display: block;
+              } //
+              > a {
+                display: none;
+              }
+              > ul {
+                > li {
+                  &.current-post-parent a{//현재 출력되는 single-page에 해당하는 메뉴
+                    font-weight: 600;
+                    color: var(--main-color);
+                    @include icon-font(before, "\f00c");
+                    &::before {
+                      margin-right: 5px;
+                    }
+                  }//.current-post-parent a
+                  a {
+                    display: block;
+                    padding: 10px;
+                    border-bottom: 1px dotted #ccc;
+                    &[aria-current] {
+                      font-weight: 600;
+                      color: var(--main-color);
+                      @include icon-font(before, "\f00c");
+                      &::before {
+                        margin-right: 5px;
+                      }
+                    }
+                  } //2dep a
+                } //2dep li
+              } //2dep ul
+            } //1dep li
+          } //1dep ul
+        } //div
+      } //snb
+    } //sub-sidebar
+  } //sub-visual
+  .sub-content {
+    position: relative;
+    background:#FFF;
+    box-sizing: border-box;
+    padding: 100px 2.5%;
+    @media screen and (min-width: 1000px) {
+      width: 65%;
+    } //sub-visaul lg
+    .line-grid {
+      position: absolute;
+      height: 100%;
+      top:0;
+      border-right: 1px solid var(--main-color);
+      left:33.33%;
+      z-index: 1;
+      opacity: 0.2;
+      @media screen and (min-width: 1200px) {
+        @for $i from 1 through 3{ // for(i=1;i<=3;i++)
+          &.line-grid#{$i}{
+            left: 25% * $i;
+          }
+        }//for
+      } //lg
+      @media screen and (max-width: 1200px) {
+        @for $i from 1 through 2{ // for(i=1;i<=3;i++)
+          &.line-grid#{$i}{
+            left: 33.333% * $i;
+          }
+        }//for
+        &.line3{display: none;}
+      } //sm
+    }//line-grid 3개
+  } //sub-content
+} //sub-wrap
+

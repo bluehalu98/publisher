@@ -1,0 +1,67 @@
+.page3-2 > p{
+  margin-bottom: 30px;
+}
+.page3-2 ul li{
+  float: left;
+  box-sizing: border-box;
+  padding: 2px;
+}
+.page3-2 ul li a{
+  display: block;
+  padding: 4px;
+  background-color: var(--dark-color);
+}
+.page3-2 ul li a figure img{
+  width: 100%;
+}
+.page3-2 ul li a figure figcaption{
+  background-color: var(--dark-color);
+  padding: 10px;
+}
+.page3-2 ul li a figure figcaption h4{
+  color: white;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666;
+  font-weight: 600;
+}
+.page3-2 ul li a figure figcaption p{
+  color: #aaa;
+}
+/* hove motion */
+.page3-2 ul li a figure{overflow: hidden;}
+.page3-2 ul li a figure figcaption{
+  position: relative;
+  background-color: var(--dark-color);
+}
+.page3-2 ul li a figure img{
+  transition: all 0.5s;
+}
+.page3-2 ul li:hover a figure img{
+  transform: scale(1.2);
+}
+
+
+
+
+
+@media screen and (min-width:1200px){
+  .page3-2 ul li{
+    width: 25%;
+  }
+}
+@media screen and (max-width:1200px) and (min-width:900px){
+  .page3-2 ul li{
+    width: 33.33%;
+  }
+}
+@media screen and (min-width:500px) and (max-width:900px){
+  .page3-2 ul li{
+    width: 50%;
+  }
+}
+@media screen and (max-width:500px){
+  .page3-2 ul li{
+    width: 100%;
+  }
+}

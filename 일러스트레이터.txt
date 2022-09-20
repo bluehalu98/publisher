@@ -1,0 +1,124 @@
+환경설정
+  작업환경
+    - window / workspace / reset
+  preference(ctrl + k)
+
+벡터(vector) 그래픽의 특징(포토샵은 픽셀 그래픽)
+  - 얼라이싱 현상이 발생하지 않는다
+  - 파일용량이 작다
+  - 도형 오브젝트위주로 작업이 이루어진다
+  - 도형은 점 선(edge) 면으로 구성된다
+  - 도형을 제작할 시 선(stroke)과 면(shape)으로 구성된다
+
+오브젝트의 생성
+  - 도형툴 선택 후 드래그를 이용
+  - 도형툴 선택 후 클릭
+  - 주의사항 (선택 해제 후 생성할 것, 선택툴 클릭 후 빈곳 클릭 또는 ctrl 빈곳 클릭)
+
+선택툴
+  - 전체선택툴(v)
+    - 오브젝트 전체를 선택
+    - 복사 :  alt + drag
+    - 정렬
+
+  - 직접선택툴(a)
+    - 점, 선을 선택
+
+정렬, 정돈
+  - 객체를 선택 후 moveTool 상단 옵션바를 이용
+    1) 정렬의 기준점(오브젝트 기준, 캔버스 기준)
+    2) align, distribute
+  그룹(ctrl + g), 언그룹 ctrl + shift + g
+
+유용한 기능
+  - ctrl + y : 와이어프레임 보기
+  - ctrl + shift + alt + s : 다양한 이미지 포맷으로 저장
+  - show grid(ctrl + "), snap to grid(ctrl + shift + ")
+  - 동일한 위치에 객체를 복사 붙여넣기 (ctrl + c 이후 ctrl + f )
+  - 마술봉(y) : 동일한 색상과 스트록을 선택
+  - 스포이드(i) : 선택한 객체를 특정 색이나 스트록으로 적용
+
+펜기능 (p)
+  - 드로잉 도구
+    - 클릭을 이용해 직선 오브젝트를 생성
+    - 드래그를 이용해 곡선 오브젝트를 생성
+    - 드로잉 시작시 컨트롤 키를 이용해 빈곳 클릭
+  - 오브젝트 편집
+    - 점위에서 클릭 : 점을 제거 (직접선택툴로 점을 제거시에는 점과 연결된 선까지 제거된다)
+    - 선위에서 클릭 : 점을 추가
+    - alt + 점클릭 : 베이지어 제거
+    - alt + 점위에서 드래그 : 베이지어
+    - 펜툴 사용시 ctrl키를 누르고 있는 동안은 직접 선택툴(a)와 동일한 기능 사용
+
+shapMode 와 pathFinder (ctrl + shift + f9)
+  - 객체가 두개일경우 최적의 결과가 나온다
+
+  - shapeMode 
+    - 두개 이상의 오브젝트를 최종 하나로 만든다
+    - Unite (객체를 하나로 합친다)
+    - Minus Front (상단의 객체로 아래쪽 객체를 뚫어낸다)
+
+  - pathFinder
+    - 오브젝트 겹치는 영역을 기준으로 쪼갠다
+    - divide후 ungroup
+    - pathFinder 설정메뉴에서 옵션 두개를 체크
+    - path와 path는 적용이 안됨
+    - shape과 path를 이용할 경우 path가 shape를 관통해야함
+
+type tool
+  - 글자를 편집
+
+오브젝트 편집 요령
+  - 주의사항
+    - 최종 완성본은 면(shape)으로 전환되어야 함
+    - 최종 완성본은 
+    - 오브젝트를 생성시 선, 면의 계획을  먼저 세워야 함
+    - 수평 혹은 수직으로 객체를 생성후 각도를 편집한다
+  
+  - object/path/outline stroke
+    - stroke형태를 shape으로 전환
+
+  - object/path/offset stroke
+    - stroke형태를 shape으로 전환
+
+  - 회전툴(rotate tool, R)
+    - 오브젝트 전체를 회전시 반드시 전체선택(v)툴을 이용해 선택한다
+
+  - 스케일툴(Scale, S)
+    - 반대칭 형태 제작시 유용 (점을 선택후 스케일)
+
+  - 가위툴 (seasor)
+
+  - stroke pallete (ctrl + f10)
+    - Cap : 선의 끝을 동그랗게 설정
+    - Corner : 선의 꺾이는 부분을 동그랗게 설정
+
+  - Effect 메뉴
+    - Effect 주의사항 : 
+      1. 적용된 effect를 수정, 편집시 반드시 apperance pallete(shift + f6)를 
+      2. 동일한 effect를 2번 적용하면 안됨!
+      3. pathFinder의 divide를 적용하기전 object/expand를 적용해야함
+    
+    - stylize / Round Corner : 
+      1. 꺽이는 부분을 동그랗게 설정(면일 때)
+      2. 끊어진 점에는 적용되지 않는다
+
+  - transform again(ctrl + d)
+    - 마지막에 변형된 설정을 반복 적용
+
+Effect / 3D / classic 효과
+  - 적용된 effect를 수정, 편집시 반드시 apperance(shift + f6)를 이용할것
+  - 추가로 수정이 필요한 경우 object/expand를 적용
+
+  - extrude
+    - perspective : 원근감 설정
+    - depth : 돌출의 양
+
+  - revolve
+    - 왼쪽 축을 기준으로 단면을 회전한다
+    - Tip : 선으로 단명을 제작할 때 효과가 좋다
+
+  - 블렌딩(blending)
+  - 마스크
+  - 심볼
+  - 그라디언트

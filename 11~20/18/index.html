@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>정렬기초</h1>
+  <hr>
+  <h2>인라인, 인라인블럭레벨의 수직정렬</h2>
+  <ul>
+    <li>
+      vertical-align <br>
+      top, middle, bottom <br>
+      block레벨에는 사용할 수 없음
+    </li>
+    <li>
+      line-height <br>
+      줄간격을 설정하는 속성이지만, <br>
+      한줄일 경우 요소의 높이와 동일하게 설정하면 <br>
+      중앙정렬 기능으로 변칙적으로 활용<br>
+      요소안쪽의 글자, 인라인계열에만 적용가능
+    </li>
+  </ul>
+  <div class="ex1">
+      <span>span</span>
+      <span>span</span>
+      <span>span</span>
+  </div>
+
+  <div class="ex2"><!-- 100x300  -->
+    <div>div</div><!-- 50x50 -->
+  </div>
+  <hr>
+  <h2>수평정렬</h2>
+  <h3>객체안의 글자 수평정렬</h3>
+  <ul>
+    <li>text-align</li>
+    <li>요소안의 글자를 left, center, right로 설정</li>
+  </ul>
+  <div class="ex3">
+    <span>span</span>
+  </div>
+  <h3>블럭레벨의 중앙정렬</h3>
+  <ul>
+    <li>margin 속성의 auto값을 이용함</li>
+    <li>margin의 auto값은 상하에는 적용되지 않는다</li>
+    <li>margin의 auto값은 인라인계열레벨에는 적용되지 않는다</li>
+  </ul>
+  <div class="ex4">
+    div
+  </div>
+  <hr>
+  <div class="ex5"><!-- 150x300 -->
+    <img src="./img/img.jpg" alt=""><!-- 50x50 -->
+  </div>
+  <div class="test">
+    <p>p</p>
+    <div class="">div</div>
+    <span>span</span>
+    <b>b</b>
+    <i>i</i>
+    <em>em</em>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/text.css">
+  <script src="https://kit.fontawesome.com/5c078cf8a0.js" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/window.js"></script>
+  <script src="./js/smoothScroll.js"></script>
+  <script src="./js/script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>sass (css전처리기)</h1>
+  <ul class="desc">
+    <li>자바스크립트파일(scss)로 작성된 css문법을 css파일로 파싱(변경, 해석)하는 형태</li>
+    <li>사전에 개발 환경을 구축해야 함</li>
+    <li>작성은 scss, 연결은 css</li>
+    <li>선택자의 접근이 간단해진다</li>
+    <li>&amp;선택자 : 부모선택자 (&amp;를 포함한 중괄호의 선택자를 의미)</li>
+    <li>
+      sass의 독특한 문법 <br>
+      · 선택자 중괄호 안에서 미디어쿼리를 작성가능 <br>
+      · rgba(green,0.8)
+    </li>
+    <li>
+      일반 css 변수 사용 예시 <br>
+      <pre>
+        <code>
+        :root{--main-color:red;}
+        body{color:var(--main-color);}
+        </code>
+      </pre>
+      scss 변수사용 예시 <br>
+      <pre>
+        <code>
+          $main-color:rgb(41,71,110);
+          body{color: $main-color;}
+        </code>
+      </pre>
+    </li>
+    <li>
+      scss의 변수나 mixin은 별도의 파일로 제작후 import를 이용해 탬플릿형태로 구조화
+    </li>
+    <li>
+      !주의 : sass의 변수나 mixin은 수정할 경우, 해당 변수나 mixin을 사용하는 모든 css파일을 재 컴파일링(새로저장) 해야한다 <br>
+      !팁 : css의 변수형태를 사용하길 권장
+    </li>
+    <li>
+      문자사이에서 변수를 출력하고 싶은 경우 <br>
+      예시
+      <pre>
+        $size:10;
+        body{
+          font-size:#{$size}px ; font-size:10px
+        }
+      </pre>
+    </li>
+    <li>
+      @mixin, @include <br>
+      목적 : 반복적이고 복잡한 css의 수정관리가 용이 <br>
+      인자 : 파라미터를 이용하여 다양한 값을 제어가 가능하다 <br>
+        <pre>
+          - 예시
+          @mixin center-width($w,$max-w){
+            width:$w;
+            max-width:$max-w;
+            margin:0 auto;
+          }
+          div{
+            @include center-width(95%, 1200px)
+          }
+        </pre>
+    </li>
+    <li>
+      반복문 <br>
+      <ul>
+        <li>
+          for구문(through:까지, to:전까지)
+          <pre>
+            @for $i from 1 through 6{
+              &:nth-child(#{$i}){
+                animation-delay: #{($i-1)*0.2}s;
+              }
+            }
+          </pre>
+        </li>
+        <li>
+          each구문, 객체와 사용할때 유용
+          <pre>
+            span{
+              $icons:(
+                1 : '\f573',
+                2 : '\f095',
+                3 : '\f1ac',
+                4 : '\f279'
+              );
+              @each $n , $icon in $icons{
+                &:nth-child(#{$n}){
+                  @include icon-font(before,$icon)
+                }
+              }
+            }
+          </pre>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+  <div class="ex">
+    <span>span1</span>
+    <span>span2</span>
+    <span>span3</span>
+    <span>span4</span>
+    <span>span5</span>
+    <span>span6</span>
+  </div>
+  <hr>
+  <div class="ex2">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+  </div>
+  <hr>
+  <div class="ex3">
+    <span>성명</span>
+    <span>전화번호</span>
+    <span>팩스</span>
+    <span>주소</span>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

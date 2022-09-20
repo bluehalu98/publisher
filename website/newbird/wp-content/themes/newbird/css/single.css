@@ -1,0 +1,125 @@
+.metabox {
+  padding: 50px 0;
+  border-bottom: 1px solid #eee;
+}
+@media screen and (min-width: 900px) {
+  .metabox {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.metabox div {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 900px) {
+  .metabox div {
+    width: 48%;
+  }
+}
+.metabox div h3 {
+  position: relative;
+  font-size: 1.3em;
+  font-weight: 900;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.metabox div h3::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--main-color);
+  top: -12px;
+  left: -12px;
+  mix-blend-mode: multiply;
+}
+.metabox div dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+}
+.metabox div dl dt, .metabox div dl dl {
+  margin-bottom: 5px;
+}
+.metabox div dl dt {
+  width: 20%;
+  margin-right: 5%;
+  font-weight: 900;
+  color: var(--dark-color);
+}
+.metabox div dl dt i {
+  margin-right: 5px;
+}
+.metabox div dl dd {
+  width: 75%;
+}
+.metabox figure {
+  position: relative;
+  transition: transform 0.5s, box-shadow 0.5s;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.metabox figure:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.metabox figure:hover a {
+  opacity: 1;
+}
+@media screen and (min-width: 900px) {
+  .metabox figure {
+    width: 45%;
+  }
+}
+.metabox figure a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--main-color);
+  opacity: 0;
+  font-size: 1.3em;
+  font-weight: 900;
+  transition: opacity 0.5s;
+}
+.metabox figure a i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.metabox figure img {
+  width: 100%;
+  height: auto;
+}
+
+.single-paging {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid rgb(245, 245, 245);
+}
+.single-paging a {
+  padding: 10px 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: 900;
+  color: var(--dark-color);
+  transition: all 0.3s;
+}
+.single-paging a.btn-list {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+.single-paging a:hover {
+  background-color: var(--main-color);
+}
+
+.single-content img {
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+}/*# sourceMappingURL=single.css.map */

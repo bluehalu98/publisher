@@ -1,0 +1,177 @@
+.home-visual {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+.home-visual .overflow {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.home-visual .overflow .col_height {
+  position: relative;
+  height: 100%;
+}
+.home-visual .overflow .col_height .img_container {
+  position: absolute;
+  width: 100%;
+  height: 400%;
+}
+.home-visual .overflow .col_height .img_container li {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  overflow: hidden;
+}
+.home-visual .overflow .col_height .img_container li figure {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  background-size: cover;
+  background-position: center;
+  filter: url(#filter) brightness(70%);
+}
+.home-visual .overflow .col_height .img_container li.box1 figure {
+  background-image: url(../img/home/main_slider01_img01.jpg);
+}
+.home-visual .overflow .col_height .img_container li.box2 figure {
+  background-image: url(../img/home/main_slider01_img02.jpg);
+}
+.home-visual .overflow .col_height .img_container li.box3 figure {
+  background-image: url(../img/home/main_slider01_img03.jpg);
+}
+.home-visual .overflow .col_height .img_container li.box4 figure {
+  background-image: url(../img/home/main_slider01_img04.jpg);
+}
+.home-visual .overflow .col_height .img_container li div {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  max-width: 500px;
+  transform: translateY(-50%);
+}
+.home-visual .overflow .col_height .img_container li div h6 {
+  position: relative;
+  margin-bottom: 20px;
+  color: #FFF;
+  font-weight: 300;
+  text-shadow: 1px 1px 0px #000;
+  font-size: 3em;
+  line-height: 120%;
+}
+.home-visual .overflow .col_height .img_container li div h6 b {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.15em;
+}
+@media screen and (max-width: 500px) {
+  .home-visual .overflow .col_height .img_container li div h6 {
+    font-size: 8vw;
+  }
+}
+.home-visual .overflow .col_height .img_container li div h6::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--main-color);
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+}
+@media screen and (max-width: 500px) {
+  .home-visual .overflow .col_height .img_container li div h6::before {
+    transform: scale(0.7) translate(-50%, -50%);
+  }
+}
+.home-visual .overflow .col_height .img_container li div p {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+.home-visual .prev, .home-visual .next {
+  position: absolute;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translateX(-50%);
+  color: #CCC;
+  background: var(--dark-color);
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+.home-visual .prev:hover, .home-visual .next:hover {
+  opacity: 1;
+  background: var(--main-color);
+  color: var(--dark-color);
+}
+.home-visual .prev {
+  top: 0;
+}
+.home-visual .next {
+  bottom: 0;
+}
+.home-visual .indicator {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 90px;
+}
+.home-visual .indicator button {
+  width: 30px;
+  height: 30px;
+  margin: 0 7px;
+  font-size: 0.75em;
+  color: #FFF;
+  border: 1px solid #FFF;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+.home-visual .indicator button:hover {
+  border-radius: 50%;
+  background: var(--dark-color);
+}
+.home-visual .indicator button:active {
+  border-radius: 50%;
+  background: var(--main-color);
+  opacity: 1;
+}
+.home-visual .progress {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-visual .progress .bar {
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid var(--main-color);
+  opacity: 0.5;
+  overflow: visible !important;
+}
+.home-visual .progress .bar::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 100%;
+  top: -5px;
+  border-radius: 50%;
+  background: var(--main-color);
+}
+.home-visual .progress .bar1 {
+  top: 25%;
+}
+.home-visual .progress .bar2 {
+  top: 50%;
+}
+.home-visual .progress .bar3 {
+  top: 75%;
+}/*# sourceMappingURL=home.css.map */

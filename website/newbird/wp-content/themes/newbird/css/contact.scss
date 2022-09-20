@@ -1,0 +1,100 @@
+@import 'mixin';
+.wpcf7{
+  form{
+    @media screen and (min-width:900px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      p{
+        width: 100%;
+        @for $i from 1 through 6{
+          &:nth-of-type(#{$i}){
+            width: 45%;
+            >label{
+              width: 20% !important;
+            }
+            >span{
+              width: 78% !important;
+            }
+          }
+        }
+        >label{
+          width: 8% !important;
+        }
+        >span{
+          width: 90% !important; 
+        }
+      }
+    }
+    p{
+      padding: 7px 0;
+      @media screen and (min-width:600px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >label{
+          width: 23%;
+        }//>label
+        >span{
+          width: 74%;
+          input,textarea{
+            
+          }
+        }//>span
+      }//p lg
+      @media screen and (max-width:600px){
+        
+      }//p sm
+      br{display: none;}
+      >label{
+        font-weight: 900;
+        color: var(--dark-color);
+        @media screen and (max-width:600px){
+          display: block;
+          margin-bottom: 10px;
+        }
+        &.must{
+          position: relative;
+          @include icon-font(before, '\f303');
+          &::before{
+            position: absolute;
+            color: var(--dark-color);
+            left: -15px;
+            top: -5px;
+            font-size: 0.85em;
+
+          }
+        }
+      }//>label
+      >span{
+        >input,>textarea,>select{
+          width: 100%;
+          padding: 5px;
+        }
+        >span label{
+          display: block;
+          box-shadow: 0 0 7px rgba(#000,.2);
+          padding: 5px;
+          border-radius: 20px;
+          border: 1px solid #ccc;
+        }
+      }//>span
+      input[type=submit]{
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 400px;
+        height: 40px;
+        border: none;
+        background-color: var(--dark-color);
+        font-weight: 900;
+        font-size: 1.2em;
+        color: #fff;
+      }//button
+      .wpcf7-spinner{
+        display: none;
+      }//spinner
+    }//p
+  }//form
+}//wpcf7

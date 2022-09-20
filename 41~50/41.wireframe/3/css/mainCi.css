@@ -1,0 +1,70 @@
+section.ci ul{
+  width: inherit;
+}
+section.ci ul li:first-child,
+section.ci ul li:last-child{
+  background-color: #ddd;
+}
+section.ci ul li:nth-child(2){background-color: #eee;}
+section.ci ul li h3{
+  font-weight: bold;
+  font-size: 2em;
+}
+section.ci ul li{
+  color: rgb(70, 122, 235);
+}
+
+@media screen and (min-width:1000px) {
+  section.ci ul li{
+    position: relative;
+    padding:100px;
+  }
+  section.ci ul li h3{
+    margin-left: 50px;
+  }
+  section.ci ul li p{
+    margin-top: 100px;
+    display: inline-block;
+    width: 60%;
+  }
+  section.ci ul li img{
+    position: absolute;
+    width: 50%;
+    right: -100px;
+    bottom: -100px;
+  }
+}
+@media screen and (max-width:1000px) and (min-width:500px) {
+  section.ci ul li{
+    padding:100px 20px;
+  }
+  section.ci ul li h3{
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  section.ci ul li div{
+    display: flex;
+    justify-content: space-between;
+  } 
+  p{
+    width: 60%;
+  }
+  section.ci ul li img{
+    width: 30%;
+  }
+}
+@media screen and (max-width:500px){
+  section.ci ul li{
+    padding:100px 10px 0 10px;
+  }
+  section.ci ul li h3{
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  section.ci ul li p{
+    text-align: center;
+  }
+  section.ci ul li img{
+    width: 100%;
+  }
+}

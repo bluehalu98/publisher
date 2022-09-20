@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    .imgbox {
+      width: 50%;
+      position: relative;
+      margin:50px auto;
+    }
+    .imgbox img {
+      display: block;
+      width: 100%;
+    }
+    .img1{
+      filter: url(#ripple-filter);
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script> 
+  <script src="./js/tweenmax.js"></script>
+  <script src="./js/fratal-ripple.js"></script>
+  <script>
+    $(function(){
+      /* displacmentWave('요소선택자','필터아이디','필터이미지경로',웨이브시간(초),웨이브크기) */
+      displacmentWave('.img1','#ripple-filter','./img/ripple.png',3,1)
+    })
+  </script>
+</head>
+
+<body>
+  <svg style="display: none">
+    <defs>
+      <filter id="ripple-filter">
+        <feImage xlink:href="./ripple.png" x="0" y="0" result="rippleImage" />
+        <feDisplacementMap  xChannelSelector="R" yChannelSelector="G" in="SourceGraphic"
+          in2="rippleImage" result="displacementMap" color-interpolation-filters="sRGB" scale="100" />
+        <feComposite operator="in" in2="rippleImage"></feComposite>
+      </filter>
+    </defs>
+  </svg>
+  
+  <figure class="imgbox">
+    <img class="img1" src="./img.jpg" alt="">
+ 
+  </figure>
+  <button class="btn1">del</button>
+  <button class="btn2">play</button>
+</body>
+</html>

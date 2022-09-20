@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h1>다양한 선택자</h1>
+<hr>
+<h2>전체선택자, 연결선택자</h2>
+<h3>전체선택자</h3>  
+<p>*, 모든객체를 선택(상속개념과 혼동하지 말것)</p>
+<div class="ex1">
+  <span>span1</span>
+  <a>span2</a>
+  <em>span3</em>
+</div>
+<h3>연결선택자</h3>
+<p>객체를 정확히 명시적으로 가독성 높게 선택하는 목적</p>
+<div class="ex2">div ex2</div>
+<p class="ex2">p ex2</p>
+<hr>
+<h2>가상클래스 선택자</h2>
+<p>가상클래스 : 미리 정해놓은 클래스 명칭</p>
+<h3>:hover, :active</h3>
+<div class="ex3">
+  <span>span</span>
+  <em>em</em>
+</div>
+<h3>:first-child, :last-child</h3>
+<p>동일한 요소끼리 순서를 정하는게 아님!</p>
+<div class="ex4">
+  <span>span</span>
+  <b>bold</b>
+  <em>em</em>
+  <i>italic</i>
+</div>
+<h3>:first-of-type, :last-of-type</h3>
+<p>동일한 요소끼리 순서를 정함</p>
+<div class="ex5">
+  <span>span</span>
+  <span>span</span>
+  <b>bold</b>
+  <b>bold</b>
+  <em>em</em>
+  <em>em</em>
+  <i>italic</i>
+  <i>italic</i>
+</div>
+<h3>:nth-child(n), :nth-of-type(n)</h3>
+<p>모든 요소를 기준으로 몇번째를 의미</p>
+<div class="ex6">
+  <span>span1</span>
+  <span>span2</span>
+  <small>samll1</small>
+  <small>samll2</small>
+</div>
+<h3>:nth-child(even), :nth-of-type(even)</h3>
+<p>even:짝수, odd:홀수</p>
+<div class="ex7">
+  <span>span1</span>
+  <span>span2</span>
+  <span>span3</span>
+  <span>span4</span>
+  <br>
+  <em>em1</em>
+  <em>em2</em>
+  <em>em3</em>
+  <em>em4</em>
+</div>
+<h3>:nth-child(3n+1), :nth-of-type(3n+1)</h3>
+<p>ex) 3n+1 ->1, 4, 7, 10</p>
+<div class="ex8">
+  <b>bold1</b>
+  <b>bold2</b>
+  <b>bold3</b>
+  <b>bold4</b>
+  <b>bold5</b>
+  <i>italic1</i>
+  <i>italic2</i>
+  <i>italic3</i>
+  <i>italic4</i>
+  <i>italic5</i>
+</div>
+<hr>
+<h2>속성선택자</h2>
+<h3>선택자[속성]</h3>
+<p>해당속성을 포함한 선택자</p>
+<h3>선택자[속성="속성값"]</h3>
+<p>해당속성과 속성값이 일치하는 요소</p>
+<div class="ex9">
+  <a href="#">a</a>
+  <a href="#">a</a>
+  <a href="naver">a</a>
+  <a href="google">a</a>
+</div>
+<hr>
+<span class="quiz">
+  <b>1</b>
+  <b>2</b>
+  <b>3</b>
+  <b>4</b>
+</span>
+<hr>
+<div class="quiz1">
+  <b>1</b>
+  <b>2</b>
+  <b>3</b>
+  <b>4</b>
+  <b>5</b>
+  <b>6</b>
+  <b>7</b>
+  <b>8</b>
+  <b>9</b>
+  <b>10</b>
+  <b>11</b>
+  <b>12</b>
+  <b>13</b>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

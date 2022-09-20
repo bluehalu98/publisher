@@ -1,0 +1,117 @@
+body {
+  color: rgb(41, 71, 110);
+}
+
+/* 
+:root{
+  --main-color:red;
+}
+body{
+  color:var(--main-color);
+}
+*/
+h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+ul.desc li {
+  margin-left: 10px;
+}
+ul.desc li::before {
+  content: "-";
+}
+
+.ex span::before {
+  content: "\f0c9";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+div.ex2 {
+  margin: 50px 0;
+  text-align: center;
+}
+div.ex2 span {
+  display: inline-block;
+  animation: jump 1s infinite;
+}
+div.ex2 span:nth-child(1) {
+  animation-delay: 0s;
+}
+div.ex2 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+div.ex2 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+div.ex2 span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+div.ex2 span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+div.ex2 span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.ex3 {
+  text-align: center;
+  margin: 30px 0;
+}
+.ex3 span:nth-child(1)::before {
+  content: "\f573";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.ex3 span:nth-child(2)::before {
+  content: "\f095";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.ex3 span:nth-child(3)::before {
+  content: "\f1ac";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.ex3 span:nth-child(4)::before {
+  content: "\f279";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}/*# sourceMappingURL=text.css.map */

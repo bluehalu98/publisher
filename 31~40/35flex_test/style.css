@@ -1,0 +1,102 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-size: 16px;}
+/* 이하부분 작성------------------------------ */
+a{
+  text-decoration: none;
+}
+.container1, .container2, .container3{
+  width: 1000px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+}
+.container1{
+  justify-content: space-between;
+  align-items: center;
+}
+.container1 div{
+  width: 20%;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.container1 div :nth-child(1), .container1 div :nth-child(2){
+  margin-bottom: 20px;
+}
+.container1 a{
+  color: black;
+}
+.container2{
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container2 div{
+  border: 1px solid black;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.container2 div:first-child, .container2 div:nth-child(2){
+  margin-bottom: 40px;
+}
+.container2 div *{
+  padding:10px;
+  color: white;
+}
+.container2 div h3, .container3 div h3, .container3 div div h3{
+  background-color: rgb(83, 83, 83);
+}
+.container2 div p{
+  flex:1;
+  background-color: rgb(151, 151, 151);
+}
+.container2 div a,  .container3 div a{
+  background-color: black;
+}
+.container2 div :nth-child(1), .container2 div :nth-child(2){
+  margin-bottom: 20px;
+}
+.container3 p{
+  background-color: rgb(151, 151, 151);
+}
+.container3{
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.container3 >div{
+  border: 1px solid red;
+  width: 30%;
+  padding: 20px;
+}
+.container3 >div:first-child, .container3 div div{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+}
+.container3 div p{
+  flex:1;
+}
+.container3 div div{
+  border: 1px solid blue;
+}
+.container3 a{
+  color: white;
+}
+.container3 div h3, .container3 div p, .container3 div a{
+  padding: 10px;
+}
+.container3 div{
+  margin-right: 20px;
+}
+.container3 div :nth-child(1), 
+.container3 div :nth-child(2),
+.container3 div div :nth-child(1)
+.container3 div div :nth-child(2){
+  margin-bottom: 20px;
+}

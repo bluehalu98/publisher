@@ -1,0 +1,322 @@
+.sub-wrap {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .sub-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.sub-wrap .sub-visual {
+  background: #ff0;
+  /* sub-figure----------------------------------------------- */
+  /* aside menu----------------------------------------------- */
+}
+@media screen and (min-width: 1000px) {
+  .sub-wrap .sub-visual {
+    position: sticky;
+    top: 90px;
+    width: 35%;
+  }
+}
+.sub-wrap .sub-visual .figure-container {
+  width: 100%;
+  height: 100%;
+}
+.sub-wrap .sub-visual .figure-container svg {
+  display: none;
+}
+.sub-wrap .sub-visual .figure-container figure {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.sub-wrap .sub-visual .figure-container figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.1);
+  filter: url(#filter) brightness(70%);
+}
+.sub-wrap .sub-visual .figure-container figure figcaption {
+  position: absolute;
+}
+@media screen and (min-width: 1000px) {
+  .sub-wrap .sub-visual .figure-container figure figcaption {
+    width: 70%;
+    right: 5%;
+    bottom: 15%;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sub-wrap .sub-visual .figure-container figure figcaption {
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+.sub-wrap .sub-visual .figure-container figure figcaption h5 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  color: #FFF;
+  font-weight: 600;
+}
+@media screen and (min-width: 1000px) {
+  .sub-wrap .sub-visual .figure-container figure figcaption h5 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sub-wrap .sub-visual .figure-container figure figcaption h5 {
+    font-size: 2em;
+  }
+}
+.sub-wrap .sub-visual .figure-container figure figcaption h5::before {
+  content: "\f10d";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.sub-wrap .sub-visual .figure-container figure figcaption h5::after {
+  content: "\f10e";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.sub-wrap .sub-visual .figure-container figure figcaption h5::before, .sub-wrap .sub-visual .figure-container figure figcaption h5::after {
+  position: absolute;
+  font-size: 0.5em;
+}
+.sub-wrap .sub-visual .figure-container figure figcaption h5::before {
+  left: 0;
+  top: 0;
+}
+.sub-wrap .sub-visual .figure-container figure figcaption h5::after {
+  right: 0;
+  bottom: 0;
+}
+.sub-wrap .sub-visual .figure-container figure figcaption p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.sub-wrap .sub-visual .sub-sidebar {
+  position: absolute;
+  background: var(--dark-color);
+  width: 70px;
+  height: 260px;
+  top: 0;
+  left: 0%;
+}
+.sub-wrap .sub-visual .sub-sidebar .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: var(--main-color);
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn span {
+  position: absolute;
+  left: 7px;
+  height: 2px;
+  background: #fff;
+  transition: width 0.2s, margin-top 0.2s, transform 0.2s, opacity 0.2s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn span.line1 {
+  width: 35px;
+  margin-top: -7px;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn span.line2 {
+  width: 25px;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn span.line3 {
+  width: 15px;
+  margin-top: 7px;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn::before, .sub-wrap .sub-visual .sub-sidebar .snb-btn::after {
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8em;
+  transition: opacity 0.5s;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn::before {
+  content: "SNB";
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn::after {
+  opacity: 0;
+  content: "CLOSE";
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn:hover span {
+  width: 35px;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn.active::before {
+  opacity: 0;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn.active::after {
+  opacity: 1;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn.active span {
+  margin-top: 0;
+  width: 35px;
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn.active span.line1 {
+  transform: rotate(45deg);
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn.active span.line2 {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb-btn.active span.line3 {
+  transform: rotate(-45deg);
+}
+.sub-wrap .sub-visual .sub-sidebar .mouse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.8);
+  animation: updown 1s infinite;
+}
+@keyframes updown {
+  0% {
+    top: 42%;
+    opacity: 1;
+  }
+  100% {
+    top: 52%;
+    opacity: 0.2;
+  }
+}
+.sub-wrap .sub-visual .sub-sidebar .snb {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  background: #fff;
+  border-radius: 0 5px 5px 0;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li {
+  display: none;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li.current-menu-parent {
+  display: block;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > a {
+  display: none;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li.current-post-parent a {
+  font-weight: 600;
+  color: var(--main-color);
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li.current-post-parent a::before {
+  content: "\f00c";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li.current-post-parent a::before {
+  margin-right: 5px;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li a[aria-current] {
+  font-weight: 600;
+  color: var(--main-color);
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li a[aria-current]::before {
+  content: "\f00c";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.sub-wrap .sub-visual .sub-sidebar .snb > div > ul > li > ul > li a[aria-current]::before {
+  margin-right: 5px;
+}
+.sub-wrap .sub-content {
+  position: relative;
+  background: #FFF;
+  box-sizing: border-box;
+  padding: 100px 2.5%;
+}
+@media screen and (min-width: 1000px) {
+  .sub-wrap .sub-content {
+    width: 65%;
+  }
+}
+.sub-wrap .sub-content .line-grid {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  border-right: 1px solid var(--main-color);
+  left: 33.33%;
+  z-index: 1;
+  opacity: 0.2;
+}
+@media screen and (min-width: 1200px) {
+  .sub-wrap .sub-content .line-grid.line-grid1 {
+    left: 25%;
+  }
+  .sub-wrap .sub-content .line-grid.line-grid2 {
+    left: 50%;
+  }
+  .sub-wrap .sub-content .line-grid.line-grid3 {
+    left: 75%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .sub-wrap .sub-content .line-grid.line-grid1 {
+    left: 33.333%;
+  }
+  .sub-wrap .sub-content .line-grid.line-grid2 {
+    left: 66.666%;
+  }
+  .sub-wrap .sub-content .line-grid.line3 {
+    display: none;
+  }
+}/*# sourceMappingURL=sub-layout.css.map */

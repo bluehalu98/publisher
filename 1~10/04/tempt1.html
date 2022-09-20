@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(document).ready(function(){
+      /* alert('hello') */
+      var a
+      $('.num1').click(function(){
+        a = parseInt(prompt('초기 값을 설정해 주십쇼')) //15
+      })
+      $('.num2').click(function(){
+        var b = parseInt(prompt('나누고자 하는 값을 설정해 주십쇼')) //2
+        var c = parseInt(a/b)
+        var result = a-b*c
+        alert('나머지는 ' + result + '입니다.')
+      })
+      $('.red').click(function(){
+        
+      })
+    })
+  </script>
+</head>
+<body>
+  <h1>나머지를 구해봅시다</h1>
+  <hr>
+  <button class="num1" style="margin: 5px">초기 값</button> <br>
+  <button class="num2" style="margin: 5px;">나누고자 하는 값</button>
+  <hr>
+  <h1>색깔을 바꿔봅시다</h1>
+  <div class="css1"><button class="red">빨강</button></div>  
+  <button class="blue">파랑</button>  
+  <button class="green">초록</button>  
+</body>
+</html>

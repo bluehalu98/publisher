@@ -1,0 +1,243 @@
+@import "mixin";
+.section-service-1{
+  .desc{
+    font-size: 1.1em;
+    color: var(--dark-color);
+    b{
+      display: inline-block;
+      font-size: 1.3em;
+      font-weight: 700;
+      @include underbar;
+    }
+  }
+  .slogun{
+    margin: 30px;
+    margin-left: 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--dark-color);
+    @include icon-font(before,'\f10d');
+    @include icon-font(after,'\f10e');
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+    li{
+      position: relative;
+      background-color: var(--main-color);
+      @media screen and (min-width:900px) {
+        width: 18%;
+        margin: 0 3%;
+        border-radius: 50%;
+        &::before{
+          content: '';
+          display: block;
+          padding-top: 100%;
+        }
+      }
+      @media screen and (max-width:900px) {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 35px 0;
+        border-radius: 50px;
+      }
+      b,i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+      }
+      b{
+        color: var(--dark-color);
+        font-weight: 800;
+        font-size: 1.4em;
+        text-transform: uppercase;
+      }
+      i{
+        color: white;
+        font-size: 4em;
+      }
+    }
+  }
+}
+.carousel-service{
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 0 30px 0 0;
+  background-color: #EEE;
+
+  .display{
+    position: relative;
+    overflow: hidden;
+    .col_width{
+      >ul{
+        position: relative;
+        display: flex;
+        width: 400%;
+        >li{
+          width: 25%;
+          @media screen and (min-width:900px) {
+            display: flex;
+            justify-content: space-between;
+            >div:first-child{
+              width: 25%;
+            }
+            >div:last-child{
+              width: 70%;
+            }
+          }
+          >div{
+            margin: 20px 0;
+            h4{
+              margin-bottom: 20px;
+              b{
+                @include underbar;
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 1.3em;
+                color: var(--dark-color);
+              }
+              small{
+                display: block;
+              }
+            }
+            div{
+              display: flex;
+              flex-wrap: wrap;
+              span{
+                width: 100%;
+                margin-bottom: 5px;
+                padding: 10px;
+                text-align: center;
+                border-radius: 50px;
+                background-color: white;
+                color: var(--dark-color);
+              }
+            }
+            p{
+              b{
+                display: inline-block;
+                color: var(--dark-color);
+                font-weight: 700;
+                font-size: 1.1em;
+                @include underbar;
+              }
+            }
+            a{
+              float: right;
+              padding: 10px;
+              background-color: white;
+              color: var(--dark-color);
+              @include icon-font(after,'\e098');
+              margin-top: 30px;
+              margin-left:30px;
+              &:hover{
+                background-color: var(--main-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    .indicator{
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+      button {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background: #fff;
+        border-radius: 50%;
+        &.active{
+          background: var(--main-color);
+        }
+      }
+    }
+  }
+}
+
+.section-service-3{
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(#000, 0.3);
+  h3{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 1.5em;
+    color: var(--dark-color);
+    @include underbar;
+  }
+  .desc{
+    font-size: 1.1em;
+    color: var(--dark-color);
+    b{
+      display: inline-block;
+      font-size: 1.3em;
+      font-weight: 700;
+      @include underbar;
+    }
+  }
+  .slogun{
+    margin: 30px;
+    margin-left: 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--dark-color);
+    font-style: italic;
+    @include icon-font(before,'\f10d');
+    @include icon-font(after,'\f10e');
+  }
+  ul{
+    @media screen and (min-width:700px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+      li{
+        box-sizing: border-box;
+        padding: 30px;
+        text-align: center;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(#000,0.3);
+        @media screen and (min-width:1000px) {
+          width: 24%;
+        }
+        @media screen and (min-width:600px) and (max-width:1000px){
+          width: 48%;
+        }
+        @media screen and (max-width:1000px){
+          margin: 10px 0;
+        }
+        b{
+          display: block;
+          margin-bottom: 15px;
+          font-weight: 900;
+          font-size: 1.15em;
+          color: var(--main-color);
+        }
+        i{
+          margin-bottom: 15px;
+          font-size: 2em;
+          color: var(--dark-color);
+        }
+        h4{
+          margin-bottom: 15px;
+          font-size: 1.2em;
+          font-weight: 700;
+          color: var(--dark-color);
+        }
+        p{
+          color: var(--dark-color);
+        }
+      }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/5c078cf8a0.js" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/window.js"></script>
+  <script src="./js/smoothScroll.js"></script>
+  <script src="./js/script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <svg class="svg1"><!-- 인라인블럭레벨 -->
+    <circle/><!-- cx,cy:원의 중심 -->
+  </svg>
+  <hr>
+  <svg class="svg2" viewBox="0 0 500 500">
+    <!-- 
+      viewBox는 반응형을 위한 속성으로 (0 0 원래x길이 원래 y길이) 로 사용
+    -->
+    <path class="star" d="M258.84,10.87l31.07,152.47l121.81-96.83l-74.21,136.77l155.55,4.12l-144.76,57.08l116.51,103.15L317.24,318.3	l22.95,153.91l-81.35-132.65L177.5,472.21l22.95-153.91L52.87,367.63l116.51-103.15L24.61,207.41l155.55-4.12L105.96,66.51	l121.81,96.83L258.84,10.87z"/>
+  </svg>
+  <hr>
+  <div class="svg3-container">
+    <svg viewBox="0 0 500 500" preserveAspectRatio="XMidYMid slice">
+      <!-- 
+        preserveAspectRatio
+        원래 svg비율과 다른 크기의 공간안에 넣을때 쓰는 속성 (img의 objectfit과 동일)
+        XMidYMid -> x, y축의 중간 (center, center)
+        slice -> cover
+        meet -> contain
+      -->
+      <path class="star" d="M258.84,10.87l31.07,152.47l121.81-96.83l-74.21,136.77l155.55,4.12l-144.76,57.08l116.51,103.15L317.24,318.3	l22.95,153.91l-81.35-132.65L177.5,472.21l22.95-153.91L52.87,367.63l116.51-103.15L24.61,207.41l155.55-4.12L105.96,66.51	l121.81,96.83L258.84,10.87z"/>
+    </svg>
+  </div>
+  <hr>
+</body>
+</html>

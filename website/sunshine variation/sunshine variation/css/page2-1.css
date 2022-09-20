@@ -1,0 +1,45 @@
+.page2-1-section>p{
+  margin:30px 0;
+  text-align: center;
+}
+.page2-1-section ul li img{
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+.page2-1-section ul li:nth-child(odd) img{
+  border: 5px solid #ddd;
+}
+.page2-1-section ul li h4{
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px;
+  margin:10px 0 ;
+}
+.page2-1-section ul li:nth-child(odd) h4{
+  background-color:var(--dark-color);
+  color: #fff;
+}
+.page2-1-section ul li:nth-child(2) h4{
+  border-bottom: 1px solid #ccc;
+}
+/* .page2-1-section ul li p{} */
+
+@media screen and (min-width:850px) {
+  .page2-1-section ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  .page2-1-section ul li{
+    width: 32%;
+  }
+  .page2-1-section ul li:nth-child(odd){
+    margin-top: 20px;
+  } 
+}
+@media screen and (max-width:850px) {
+  .page2-1-section ul li{
+    margin:20px auto;/* 블럭레벨의 첫번째 자식은 마진탑, 마지막자식은 마진 바텀이 작용 하지 않음 */
+    max-width: 400px;
+  }
+}

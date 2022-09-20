@@ -1,0 +1,22 @@
+$main-color:rgb(41,71,110);
+$sub-color:rgb(55,128,209);
+$size : 16;
+
+@mixin center-width{
+  width: 95%;
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
+@mixin icon-font($psuiedo,$unicode){
+  &::#{$psuiedo}{
+    content: $unicode;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+  }
+}

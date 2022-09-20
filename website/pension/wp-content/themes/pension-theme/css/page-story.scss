@@ -1,0 +1,35 @@
+@import './mixin';
+section.visual-story{
+  margin-bottom: 30px;
+  padding: 7px;
+  background: rgb(155, 202, 229);
+  border:1px solid #CCC;
+  figure{
+    border:1px solid #CCC;
+    background-image: url(../img/sub1/sub1-1.jpg);
+    filter:url(#filter);
+    img{
+      opacity: 0;
+      width: 100%;
+    }
+  }
+ 
+}//section
+section.greet-story{
+  h3{
+   
+    padding: 5px;
+    border-bottom: 1px solid var(--main-color);
+    font-size: 1.15em;
+    font-weight: bold;
+    color:var(--main-color);
+    i{
+      transform: scaleX(-1);
+    }
+  }//h3
+  p{
+    padding: 20px;
+    background: linear-gradient( rgba(#f9bf26,0.3) , rgba(#f9bf26,0));
+    color:var(--dark-color);
+  }
+}//section

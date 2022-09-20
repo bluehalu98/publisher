@@ -1,0 +1,68 @@
+.page1-2-section1 dl{
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.page1-2-section1 dl>*{
+  box-sizing: border-box;
+  padding: 7px;
+  margin: 5px 0;
+}
+.page1-2-section1 dl dt{
+  font-weight: 600;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.page1-2-section1 dl dt i{color: var(--point-color);margin-right: 3px;}
+@media screen and (min-width:600px){
+  .page1-2-section1 dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  } 
+  .page1-2-section1 dt{width: 20%;}
+  .page1-2-section1 dd{width: 75%;}
+}
+/* map */
+.page1-2-section1 .map{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+.page1-2-section1 .map2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.hide{display: none !important;}
+.tab-menu{
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 600px;
+  height: 45px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.tab-menu button{
+  height: 46px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 0;
+  background-color: #eee;
+}
+.tab-menu button.active{
+  background-color: #fff;
+  border-bottom-color: #fff;
+  color: var(--point-color);
+}

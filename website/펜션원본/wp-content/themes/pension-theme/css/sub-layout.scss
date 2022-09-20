@@ -1,0 +1,230 @@
+@import './mixin';
+.sub-wrap{
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  @media screen and (min-width:1000px){
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .sub-visual{
+    height: 100%;
+    background-color:yellow;
+    @media screen and (min-width:1000px){
+      position: sticky;
+      top: 90px;
+      width: 35%;
+    }
+    /* ----------------------------------------------------------------------- */
+    .figure-container{
+      width: 100%;
+      height: 100%;
+      svg{display: none;}
+      figure{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          filter: url(#filter) brightness(70%);
+          transform: scale(1.2);
+        }
+        figcaption{
+          position: absolute;
+          @media screen and (min-width:1000px){
+            right: 5%;
+            bottom: 15%;
+            width: 70%;
+            text-align: right;
+          }
+          @media screen and (max-width:1000px){
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+          }
+          h5{
+            position: relative;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+
+            padding: 0 20px;
+            @media screen and (min-width:1000px){
+              font-size: 2.5em;
+              font-weight: 600;
+            }
+            @media screen and (max-width:1000px){
+              font-size: 2em;
+            }
+            @include icon-font(before,'\f10d');
+            @include icon-font(after,'\f10e');
+            &::before,&::after{
+              font-size: 0.5em;
+              position: absolute;
+            }
+            &::before{
+              left: 0;
+              top: -15px;
+            }
+            &::after{
+              right: 0;
+              bottom: -15px;
+            }
+          }
+          p{
+            color: rgba(#fff,.7);
+          }
+        }
+      }
+    }//figure container
+    /* ----------------------------------------------------------------------- */
+    .sub-sidebar{
+      position: absolute;
+      background-color: var(--dark-color);
+      width: 70px;
+      height: 260px;
+      top: 0;
+      left: 0;
+      .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+        background-color: var(--main-color);
+        writing-mode: vertical-rl;
+        color: #fff;
+        text-align: center;
+      }
+      .snb-btn{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        @include barBtn(#fff,'SNB', 'CLOSE');
+      }
+      .mouse{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        color: rgba(#fff, .8);
+        animation: updown 1s infinite;
+        @keyframes updown{
+          0%{
+            top: 60%;
+            opacity: 1;
+          }
+          100%{
+            top: 70%;
+            opacity: 0;
+          }
+        }
+      }
+      .snb{
+        display: none;
+        position: absolute;
+        top:100%;
+        width: 200px;
+        background-color: #fff;
+        border-radius: 0 5px 5px 0;
+        .menu-menu-container{
+          >ul{
+            >li{
+              display: none;
+              &.current-menu-parent{
+                display: block;
+              }//현재 보여지는 페이지의 1dep li
+              >a{
+                display: none;
+              }
+              >ul{
+                >li{
+                  &.current-post-parent a{//현재 출력되는 single page에 해당하는 메뉴
+                    font-weight: 600;
+                    color: var(--main-color);
+                    @include icon-font(before, '\f00c');
+                    &::before{
+                      margin-right: 5px;
+                    }     
+                  }
+                  >a{
+                    display: block;
+                    padding: 10px;
+                    border-bottom: 1px dotted #ccc;
+                    &[aria-current]{
+                      font-weight: 600;
+                      color: var(--main-color);
+                      @include icon-font(before, '\f00c');
+                      &::before{
+                        margin-right: 5px;
+                      }                      
+                    }
+                  }
+                  &:last-child{
+                    >a{
+                      border-bottom: none;
+                    }
+                  }
+                }//2dep li
+              }//2dep ul
+            }//1dep li
+          }//1dep ul
+        }
+      }//navigator
+    }
+  }
+  .sub-content{
+    position: relative;
+    background-color: #fff;
+    padding: 100px 2.5%;
+    box-sizing: border-box;
+    @media screen and (min-width:1000px){
+      width: 65%;
+    }
+    .line-grid{
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      top: 0;
+      border-right: 1px solid #666;
+      left: 33.33%;
+      opacity: .2;
+      mix-blend-mode: difference;
+      @media screen and (min-width:1200px){
+        @for $i from 1 through 3{
+          &.line-grid#{$i}{
+            left: 25% * $i;
+          }
+        }
+      }
+      @media screen and (max-width:1200px){
+        @for $i from 1 through 2{
+          &.line-grid#{$i}{
+            left:33.33% * $i
+          }
+        }
+        &.line-grid3{display: none;}
+      }
+    }
+  }
+}
+/*
+  @media screen and (min-width:1000px){
+
+  }
+  @media screen and (max-width:1000px) and (min-width:1000px){
+    
+  }
+  @media screen and (max-width:1000px){
+    
+  }
+ */

@@ -1,0 +1,80 @@
+@import 'mixin';
+.room-title{
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--main-color);
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    border-bottom: 1px dotted var(--main-color);
+  }
+  span{
+    position: relative;
+    padding: 0 20px;
+    background-color: #fff;
+  }
+}//h3
+
+.room-info-meta{
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--main-color);
+  dt,dd{
+    box-sizing: border-box;
+    padding: 7px;
+    @media screen and (min-width:800px){
+      border-bottom: 1px solid #ddd;
+    }
+  }//dt dd
+  dt{
+    background-color: var(--dark-color);
+    color: #fff;
+    @media screen and (min-width:800px){
+      width: 20%;
+    }
+    @media screen and (max-width:800px){      
+      width: 100%;
+    }
+  }
+  dd{
+    @media screen and (min-width:800px){
+      width: 80%;
+    }
+    @media screen and (max-width:800px){      
+      width: 100%;
+    }
+  }
+}//dl
+.book-guide-link{
+  display: flex;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 1px solid var(--dark-color);
+  border-radius: 50px;
+  overflow: hidden;
+  li{
+    flex: 1;
+    a{
+      display: block;
+      padding: 10px;
+      text-align: center;
+      &.book-link{
+        background-color: var(--dark-color);
+        color: #fff;
+      }
+      &:hover{
+        background-color: var(--main-color);
+        color: #fff;
+      }
+    }//a
+  }//li
+}//book guide link

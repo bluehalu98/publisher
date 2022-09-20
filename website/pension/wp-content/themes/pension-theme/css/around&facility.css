@@ -1,0 +1,38 @@
+section.page-around ul li,
+section.page-facility ul li {
+  margin: 20px 0;
+}
+section.page-around ul li h3,
+section.page-facility ul li h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--dark-color);
+  border-bottom: 1px solid var(--sub-color);
+}
+section.page-around ul li h3::after,
+section.page-facility ul li h3::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background: var(--dark-color);
+  bottom: -1px;
+  left: 0;
+}
+section.page-around ul li p,
+section.page-facility ul li p {
+  margin-bottom: 20px;
+}
+section.page-around ul li figure,
+section.page-facility ul li figure {
+  padding: 5px;
+  border: 1px solid #CCC;
+  background: #EEE;
+}
+section.page-around ul li figure img,
+section.page-facility ul li figure img {
+  width: 100%;
+}/*# sourceMappingURL=around&facility.css.map */

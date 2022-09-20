@@ -1,0 +1,1 @@
+호출시 particles를 호출한뒤 각 속성의 particle-속성 js파일을 호출한다

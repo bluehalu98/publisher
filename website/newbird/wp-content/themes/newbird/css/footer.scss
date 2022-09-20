@@ -1,0 +1,113 @@
+@import 'mixin';
+.site-footer{
+  position: relative;
+  
+  .inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    .footer-top{
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 70px;
+      text-align: center;
+      p{
+        span{
+          display: inline-block;//인라인레벨이 부모이고 자식이 블럭레벨이면 무시한다
+          color: var(--dark-color);
+          font-weight: 900;
+          font-size: 1.3em;
+          @include underbar;
+          @media screen and (max-width:600px) {
+            font-size: 3vw;
+          }
+        }//span
+      }//p
+      em{
+        display: block;
+        margin: 40px 0;
+        font-size: 4em;
+        line-height: 110%;
+        color: #fff;
+        font-weight: 900;
+        text-shadow: 0 0 20px rgba(black,.2);
+        @media screen and (max-width:800px) {
+          font-size: 7vw;
+        }
+      }
+      h6{
+        color: #eee;
+        font-weight: 900;
+        font-size: 8em;
+        line-height: 50%;
+        @media screen and (max-width:700px) {
+          font-size: 15vw;
+        }
+      }
+    }//footer top
+    .footer-bottom{
+      position: relative;
+      padding: 70px 5%;
+      background-color: var(--dark-color);
+      @media screen and (min-width:800px) {
+        display: flex;
+        justify-content: space-between;
+        ul{width: 75%;}
+        div{width: 25%;}
+      }//footer bottom lg
+      ul{
+        @media screen and (min-width:1000px) {
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            margin-right: 50px;
+            margin-bottom: 20px;
+          }
+        }//ul sm
+        li{
+          margin-bottom: 10px;
+          .newbird{color: var(--main-color);}
+          h5{
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 5px;
+          }//h5
+          p{
+            color: #6c7196;
+            a:hover{
+              color: var(--main-color);
+            }
+          }
+        }//li
+      }//ul
+      div{
+        a{
+          display: block;
+          margin-bottom: 20px;
+          padding: 15px 25px;
+          font-weight: 900;
+          font-size: 1.1em;
+          color: var(--dark-color);
+          border-radius: 7px;
+          transition: all 0.3s;
+          @include icon-font(after, '\f054');
+          &::after{
+            float: right;
+          }
+          &:first-child{
+            background-color: var(--main-color);
+            &:hover{
+              background-color: var(--dark-color);
+              color: #fff;
+            }
+          }
+          &:last-child{
+            background-color: #fff;
+            &:hover{
+              background-color: var(--main-color);
+            }
+          }
+        }
+      }//div
+    }//footer bottom
+  }//inner
+}

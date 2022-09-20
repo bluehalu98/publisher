@@ -1,0 +1,27 @@
+.page1-1-section1{
+  text-align: center;
+}
+.page1-1-section1 p{
+  margin: 20px auto;
+}
+.page1-1-section1 p:nth-of-type(1){max-width: 500px;}
+.page1-1-section1 p:nth-of-type(2){max-width: 700px;}
+.page1-1-section1 p:nth-of-type(3){max-width: 500px;}
+.page1-1-section1 p:nth-of-type(4){max-width: 700px;}
+.page1-1-section1 p:nth-of-type(5){max-width: 600px;}
+.page1-1-section1 figure{
+  border:5px solid var(--main-color);
+  margin: 0 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+@media screen and (min-width:900px){
+  .page1-1-section1 figure{display: flex;}
+  .page1-1-section1 figure img{width: 50%;}
+}
+@media screen and (max-width:900px){
+  .page1-1-section1 figure{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .page1-1-section1 figure img{width: 100%;}
+}

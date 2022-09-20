@@ -1,0 +1,39 @@
+:root{
+  --main-color:#f9bf26;
+  --sub-color:#fff0ca;
+  --dark-color:#26262b;
+  --gray-color:#38383b;
+}
+body{
+  font-family:'Montserrat','Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color:#666;
+}
+
+.theme-guide{
+  display: inline-block !important;
+  margin-bottom: 30px !important;
+  padding: 15px !important;
+  background: var(--dark-color);
+  color:#BBB;
+}
+
+.sub-title{
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-weight: 900;
+  color:var(--main-color);
+  
+  &::after{
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 60px;
+    border-top: 3px solid var(--main-color);
+  }
+}
+.sub-desc{
+  margin-bottom: 30px !important;
+  font-weight: 600;
+  color:var(--dark-color);
+}  

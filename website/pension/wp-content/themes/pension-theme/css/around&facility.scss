@@ -1,0 +1,36 @@
+@import './mixin';
+section.page-around,
+section.page-facility {
+  ul {
+    li {
+      margin: 20px 0;
+      h3 {
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        font-size: 1.2em;
+        font-weight: bold; 
+        color:var(--dark-color);
+        border-bottom: 1px solid var(--sub-color);
+        &::after{
+          content: '';
+          position: absolute;
+          width: 70px;
+          height: 2px;
+          background: var(--dark-color);
+          bottom: -1px;
+          left:0;
+        }
+      }//h3
+      p{margin-bottom: 20px;}
+      figure{
+        padding: 5px;
+        border:1px solid #CCC;
+        background: #EEE;
+        img{
+          width: 100%;
+        }
+      }//figure
+    }//li
+  }//ul
+}//section

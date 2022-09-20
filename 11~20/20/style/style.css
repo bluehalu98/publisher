@@ -1,0 +1,157 @@
+.ex1{font-size: 0px;}
+.ex1 span{
+  display:inline-block;
+  font-size: 15px;
+  width: 100px;
+  background-color: #f60;
+  vertical-align: top;
+  text-align: center;
+}
+.ex1 span:first-child{
+  height: 150px;
+  line-height: 150px;
+}
+.ex1 span:nth-child(2){
+  height: 100px;
+  line-height: 100px;
+}
+.ex1 span:last-child{
+  height: 50px;
+  line-height: 50px;
+}
+.ex2 span{
+  background-color: aquamarine;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.ex2 span:nth-child(1){
+  height: 150px;
+  line-height: 150px;
+}
+.ex2 span:nth-child(2){
+  height: 100px;
+  line-height: 100px;
+}
+.ex2 span:nth-child(3){
+  height: 50px;
+  line-height: 50px;
+}
+.ex3{
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  margin:0 auto;
+  line-height: 200px;
+  text-align:center;
+}
+.ex3 span{
+  background-color: white;
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 100px;
+}
+.ex4{
+  width: 300px;
+  height: 200px;
+  margin:0 auto;
+  background-color: chartreuse;
+  text-align: center;
+  line-height: 200px;
+}
+.ex4 span{
+  display: inline-block;
+  background-color: #f60;
+  width:100px;
+  vertical-align: middle;
+}
+.ex4 span:first-child{
+  height: 100px;
+  line-height: 100px;
+}
+.ex4 span:last-child{
+  height: 50px;
+  line-height: 50px;
+}
+.ex5{
+  background-color: yellow;
+  margin:0 auto;
+  width: 500px;
+/*   text-align: right; */
+}
+.ex5 span{
+  background-color: black;
+  color:white;
+  width: 100px;
+  height: 100px;
+  display:block;
+  margin:0 0 0 auto;
+  text-align: center;
+  line-height: 100px;
+/*   display: inline-block;
+  line-height: 100px; */
+}
+.ex6{
+  background-color: yellow;
+}
+.ex6 span{
+  background-color: black;
+  color: white;
+  display:block;
+  width: 100px;
+  height: 100px;
+  margin:0 0 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+.ex7{
+  background-color: yellow;
+  text-align: center;
+}
+.ex7 span{
+  background-color: black;
+  color: white;
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+.ex8{
+  background-color: yellow;
+}
+.ex8 span{
+  background-color: black;
+  color:white;
+  display:block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.ex8 :first-child{
+  margin:0 auto;
+}
+.ex8 :last-child{
+  margin:0 0 0 auto;
+}
+.ex9{
+  background-color: yellow;
+}
+.ex9 span{
+  background-color: black;
+  color:white;
+  display:block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.ex9 :nth-child(odd){
+  margin: 0 auto 0 0;
+}
+.ex9 :nth-child(even){
+  margin: 0 0 0 auto;
+}

@@ -1,0 +1,197 @@
+.section-about-1 .desc {
+  font-size: 1.1em;
+  color: var(--dark-color);
+}
+.section-about-1 .desc b {
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.section-about-1 .desc b::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: var(--main-color);
+  margin-top: -3px;
+  mix-blend-mode: multiply;
+}
+.section-about-1 .slogun {
+  margin: 30px;
+  margin-left: 0;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+.section-about-1 .slogun::before {
+  content: "\f10d";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.section-about-1 .slogun::after {
+  content: "\f10e";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.section-about-1 img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.section-about-1 ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section-about-1 ul li {
+  position: relative;
+  margin: 30px 0;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .section-about-1 ul li {
+    width: 24%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .section-about-1 ul li {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section-about-1 ul li {
+    width: 100%;
+  }
+}
+.section-about-1 ul li b {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--dark-color);
+  font-weight: 900;
+  font-size: 1.2em;
+}
+.section-about-1 ul li em {
+  color: var(--main-color);
+  font-size: 4.5em;
+  font-weight: 900;
+}
+
+.section-about-2 {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.section-about-2 h3 {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-weight: 800;
+  font-size: 1.5em;
+  color: var(--dark-color);
+}
+.section-about-2 h3::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: var(--main-color);
+  margin-top: -3px;
+  mix-blend-mode: multiply;
+}
+@media screen and (min-width: 700px) {
+  .section-about-2 dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section-about-2 dl dt {
+    width: 20%;
+  }
+  .section-about-2 dl dd {
+    width: 75%;
+  }
+}
+.section-about-2 dl dt, .section-about-2 dl dd {
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+.section-about-2 dl dt {
+  font-size: 1.1em;
+  font-weight: 900;
+  color: var(--dark-color);
+  border-color: #222;
+}
+.section-about-2 ul {
+  margin-top: 50px;
+}
+@media screen and (min-width: 600px) {
+  .section-about-2 ul {
+    display: flex;
+    justify-content: center;
+  }
+  .section-about-2 ul li {
+    width: 20%;
+    margin: 0 !important;
+  }
+}
+.section-about-2 ul li {
+  position: relative;
+  max-width: 150px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 0, 0.7);
+  border-radius: 50%;
+  scale: 1.2;
+}
+.section-about-2 ul li:nth-child(2) {
+  background-color: rgba(204, 204, 204, 0.7);
+  z-index: 1;
+}
+.section-about-2 ul li:nth-child(2) i {
+  position: absolute;
+  color: #fff;
+}
+@media screen and (min-width: 600px) {
+  .section-about-2 ul li:nth-child(2) i {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .section-about-2 ul li:nth-child(2) .link1 {
+    left: 2.5%;
+  }
+  .section-about-2 ul li:nth-child(2) .link2 {
+    right: 2.5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-about-2 ul li:nth-child(2) i {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section-about-2 ul li:nth-child(2) .link1 {
+    top: 5%;
+  }
+  .section-about-2 ul li:nth-child(2) .link2 {
+    bottom: 5%;
+  }
+}
+.section-about-2 ul li::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.section-about-2 ul li span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  color: var(--dark-color);
+}/*# sourceMappingURL=page-about.css.map */

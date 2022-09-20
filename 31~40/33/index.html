@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>flex</h1>
+  <!-- 
+    객체들이 껴있을때는 float를 사용하는게 좋고 float나 flex를 사용
+    할수 있을때는 flex를 사용하는게 좋다
+   -->
+   <hr>
+   <h2>1. flex박스의 개념</h2>
+   <ul>
+    <li>부모컨테이너에게 flex를 적용</li>
+    <li>flex컨테이너는 block레벨의 성격을 갖는다</li>
+    <li>flex컨테이너의 자식객체들은 기본 display속성이 아니다</li>
+    <li></li>
+   </ul>
+   <div class="ex1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   <hr>
+
+   <h2>2. flex-direction</h2>
+   <ul>
+    <li>row : 기본값, 그리드가 수평배치</li>
+    <li>column : 그리드가 수직배치</li>
+    <li>row-reverse : 그리드가 오른쪽 역순(순서가 바뀐다)</li>
+    <li>column-reverse : 그리드가 아래쪽 역순(순서가 바뀐다)</li>
+   </ul>
+   <div class="ex2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   <br>
+   <div class="ex2 reverse">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   <br>
+   <span class="ex2">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+   </span>
+   <br>
+   <span class="ex2 reverse">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+   </span>
+   <hr>
+
+   <h2>3. justify-content</h2>
+   <ul>
+    <li>flex 컨테이너에 적용, flex컨테이너 자식들의 위치분할</li>
+    <li>
+      flex-start : 기본값 <br>
+      flex-direction이 row일 경우 flex-start 왼쪽<br>
+      flex-direction이 column일 경우 flex-start 위쪽<br>
+      flex-direction이 row-reverse일 경우 flex-start 오른쪽 역순<br>
+      flex-direction이 column-reverse일 경우 flex-start 아래쪽 역순 
+    </li>
+    <li>
+      space-between : 부모컨테이너의 공간을 자식들이 분배해 갖는다 <br>
+      flex-direction이 row일 경우 좌우 분할<br>
+      flex-direction이 column일 경우 상하 분할<br>
+      flex-direction이 row-reverse일 경우 좌우 분할<br>
+      flex-direction이 column-reverse일 경우 상하 분할
+    </li>
+    <li>
+      flex-end : 반대쪽으로 자식들을 정렬한다 <br>
+      flex-direction이 row일 경우 오른쪽으로 정렬<br>
+      flex-direction이 column일 경우 아래로 정렬 <br>
+      flex-direction이 row-reverse일 경우 왼쪽으로 역순으로 정렬<br>
+      flex-direction이 column-reverse일 경우 위쪽으로 역순으로 정렬 <br>
+      순서는 reverse일경우에만 역순이다
+    </li>
+   </ul>
+   <div class="ex3 space">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   <br>
+   <div class="ex3 end">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   <br>
+   <span class="ex3 space">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+   </span>
+   <br>
+   <span class="ex3 end">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+   </span>
+   <hr>
+   <h2>4. align-items</h2>
+   <ul>
+    <li>
+      :strecth <br>
+      flex-direction이 row일 경우 자식들의 높이가 부모의 높이와 같아진다 <br>
+      flex-direction이 column일 경우 자식들의 넓이가 부모의 넓이와 같아진다
+    </li>
+    <li>
+      :center <br>
+      flex-direction이 row일 경우 자식들이 원래 높이가 되며 부모의 수직중앙으로 정렬 <br>
+      flex-direction이 column일 경우 자식들이 원래 넓이가 되며 부모의 수평중앙으로 정렬
+    </li>
+    <li>
+      :flex-start <br>
+      flex-direction이 row일 경우 자식들이 원래 높이가 되며, 왼쪽 정렬 <br>
+      flex-direction이 column일 경우 자식들이 원래 높이가 되며 윗쪽 정렬
+    </li>
+    <li>
+      :flex-end <br>
+      flex-direction이 row일 경우 자식들이 원래 높이가 되며, 오른쪽 정렬 <br>
+      flex-direction이 column일 경우 자식들이 원래 높이가 되며, 아래쪽 정렬 
+    </li>
+    <li>justify-content와 align-items속성 모두 center로 설정하면 객체의 정중앙으로 이동한다</li>
+   </ul>
+   <!-- 
+    direction row
+    justify-content - 자식들이 왼쪽 중앙 오른쪽으로 정렬
+    align-items - 자식들이 위 중앙 아래로 정렬
+    
+    direction col
+    justify-content - 자식들이 위 중앙 아래로 정렬
+    align-items - 자식들이 왼쪽 중앙 오른쪽으로 정렬
+    -->
+   <div class="ex4">
+    <div>1</div>
+    <div>2 <br> 2</div>
+    <div>3 <br> 3 <br> 3</div>
+   </div>
+   <br>
+   <span class="ex4">
+    <span>1</span>
+    <span>2 2</span>
+    <span>3 3 3</span>
+   </span>
+   <br>
+   <div class="ex5 row">
+    <div>1</div>
+    <div>2 <br> 2</div>
+    <div>3 <br> 3 <br> 3</div>
+   </div>
+   <br>
+   <span class="ex5 col">
+    <span>1</span>
+    <span>2 2</span>
+    <span>3 3 3</span>
+   </span>
+   <hr>
+   <div class="test">
+    <div>1</div>
+    <div>2 <br> 2</div>
+    <div>3 <br> 3 <br> 3</div>
+   </div>
+   <br>
+   <span class="test">
+    <span>1</span>
+    <span>2 2</span>
+    <span>3 3 3</span>
+   </span>
+   <hr>
+   <h2>5. flex 속성</h2>
+   <ul>
+    <li>flex 속성은 부모컨테이너에 display flex가 적용되었을 때 자식객체에 설정하는 속성</li>
+    <li>
+      flex-direction이 row인경우 자식들이 넓이를 나누어 갖는다<br>
+      flex-direction이 col인경우 자식들이 높이를 나누어 갖는다
+    </li>
+  </ul>
+   <div class="ex6">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   <br>
+   <span class="ex6">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+   </span>
+   <hr>
+   <h2>6. flex-wrap</h2>
+   <div class="ex7">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+   </div>
+   <hr>
+   <h2>중앙정렬예제</h2>
+   <div class="ex8">
+    div ex8 <br>
+    div ex......8 <br>
+    ex8
+   </div>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

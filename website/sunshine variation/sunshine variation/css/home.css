@@ -1,0 +1,547 @@
+.home-visual{
+  position: relative;
+  height: 100%;
+  background-color: black;
+}
+.home-visual .overflow{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.home-visual .overflow .col_width{
+  width: 100%;/* 100% 나누기 1칸 */
+  height: 100%;
+}
+.home-visual .overflow .col_width .img_container{
+  /*
+   칸개수 곱하기 100%넓이, 반드시 position이 적용되어야 함
+    absolute 부모기준좌표
+    fixed, sticky는 브라우저 기준
+    relative는 태어난 위치
+   */
+  position: relative;
+  width: 400%;
+  height: 100%;
+  cursor: grabbing;
+}
+.home-visual .overflow .col_width .img_container li{
+  float: left;
+  width: 25%;/* 100% 나누기 칸갯수 */
+  height: 100%;
+  /* 
+  그리드간의 간격이 필요한 경우 예시
+  padding:20px;
+  box-sizing:border-box;
+  */
+}
+.home-visual .overflow .col_width .img_container li .inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.home-visual .overflow .col_width .img_container li .inner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.home-visual .overflow .col_width .img_container li .inner figcaption{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 600px;
+  text-align: center;
+}
+.home-visual .overflow .col_width .img_container li .inner figcaption h6{
+  margin-bottom: 20px;
+  font-size: 60px;
+  color: #FFF;
+  line-height: 100%;/* 큰글자는 낮게 작은클자는 크게가 디자인적으로 좋음 */
+}
+@media screen and (max-width:500px){
+  .home-visual .overflow .col_width .img_container li .inner figcaption h6{
+    font-size: 12vw;  
+  }
+}
+.home-visual .overflow .col_width .img_container li .inner figcaption p{
+  color: rgba(255,255,255,.7);
+  max-width: 300px;
+  margin: 0 auto;
+}
+.home-visual .next, .home-visual .prev{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .5;
+  transition: all 0.2s;
+}
+.home-visual .prev{left: 30px;}
+.home-visual .next{right: 30px;}
+.home-visual .next:hover, .home-visual .prev:hover{
+  opacity: .8;
+}
+.home-visual .next:active{
+  right: 20px;
+}
+.home-visual .prev:active{
+  left: 20px;
+}
+.home-visual .next i, .home-visual .prev i{
+  font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px 0 black;
+}
+.home-visual .indicator{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-visual .indicator button{
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 7px;
+  margin: 0 3px;
+  opacity: .7;
+  transition: all 0.5s;
+}
+.home-visual .indicator button.active{
+  width: 40px;
+  opacity: 1;
+}
+.home-visual .progress{
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  bottom: 0;
+  background-color: rgba(255,255,255,.5);
+}
+.home-visual .progress .bar{
+  height: 100%;
+  background-color: var(--dark-color);
+}
+/* active motion */
+.home-visual .overflow .col_width .img_container li .inner figcaption *{
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+}
+.home-visual .overflow .col_width .img_container li .inner figcaption h6{
+  transform: translate(-50px, -50px);
+}
+.home-visual .overflow .col_width .img_container li .inner figcaption p{
+  transform: translate(50px, 50px);
+}
+.home-visual .overflow .col_width .img_container li.active .inner figcaption *{
+  opacity: 1;
+}
+.home-visual .overflow .col_width .img_container li.active .inner figcaption h6{
+  transform: translate(0,0);
+}
+.home-visual .overflow .col_width .img_container li.active .inner figcaption p{
+  transform: translate(0,0);
+}
+.home-visual .overflow .col_width .img_container li .inner img{
+  transform: scale(1.2);
+  transition: all 1s;
+  filter: blur(6px) brightness(50%) grayscale(50%);
+}
+.home-visual .overflow .col_width .img_container li.active .inner img{
+  transform: scale(1);
+  transition: transform 20s, filter 3s;
+  filter: blur(0) brightness(80%) grayscale(0);
+}
+/*
+ particle 
+ 페이지당 하나만
+ */
+#particles-js{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+/* ------------------------------------------------------------------------------- */
+.home-section1{
+  padding: 50px 0;
+}
+.home-section1 ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-section1 ul li{
+  padding: 15px;
+  box-sizing: border-box;
+}
+.home-section1 ul li a figure div{
+  position: relative;
+  border: 5px solid var(--main-color);
+  box-shadow: 0 0 10px ;
+} 
+.home-section1 ul li a figure div span{
+  position: absolute;
+  background-color: rgba(255,255,255,.7);
+}
+.home-section1 ul li a figure div .line1{
+  top: 30px;left: 30px;width: calc(100% - 60px);height: 1px;
+}
+.home-section1 ul li a figure div .line2{
+  top: 30px;right: 30px;width: 1px ;height:calc(100% - 60px);
+}
+.home-section1 ul li a figure div .line3{
+  bottom: 30px;right: 30px;width: calc(100% - 60px);height: 1px;
+}
+.home-section1 ul li a figure div .line4{
+  bottom: 30px;left: 30px;width: 1px ;height:calc(100% - 60px);
+}
+.home-section1 ul li a figure div img{
+  width: 100%;
+  opacity: 0.5;
+}
+.home-section1 ul li a figure{position: relative;}
+.home-section1 ul li a figure figcaption{
+  padding: 10px 0;
+}
+.home-section1 ul li a figure figcaption h3{
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: var(--main-color);
+  position: relative;
+}
+.home-section1 ul li a figure figcaption h3::before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background-color: var(--main-color);
+}
+.home-section1 ul li a figure figcaption h3 span{
+  padding-right: 10px;
+  position: relative;
+  background-color: #fff;
+}
+.home-section1 ul li a figure figcaption p::first-letter{
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.home-section1 ul li a figure{
+  overflow: hidden;
+}
+.home-section1 ul li a figure::before{
+  content: '\f0d8';
+  position: absolute;
+  line-height: 0;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: var(--main-color);
+}
+
+@media screen and (min-width:1000px){
+  .home-section1 ul li{
+    width: 25%;
+  } 
+}
+@media screen and (max-width:1000px) and (min-width:500px){
+  .home-section1 ul li{
+    width: 50%;
+  }
+}
+@media screen and (max-width:500px){
+  .home-section1 ul li{
+    width: 100%;
+  }
+}
+
+/* section1 hover motion */
+.home-section1 ul li figure div{
+  overflow: hidden;
+  background-color: black;
+}
+.home-section1 ul li a figure img{
+  transition: all 0.5s;
+}
+.home-section1 ul li:hover a figure img{
+  transform: scale(1.2);
+  opacity: 1;
+}
+.home-section1 ul li a figure div span{
+  transition: all 0.2s;
+  transition-timing-function: linear;
+}
+.home-section1 ul li a figure div .line1{
+  transition-delay: 0s;
+}
+.home-section1 ul li a figure div .line2{
+  transition-delay: 0.2s;
+}
+.home-section1 ul li a figure div .line3{
+  transition-delay: 0.4s;
+}
+.home-section1 ul li a figure div .line4{
+  transition-delay: 0.6s;
+}
+.home-section1 ul li:hover a figure div .line1{
+  width: 0;
+  transition-delay: 0.6s;
+}
+.home-section1 ul li:hover a figure div .line2{
+  height:0;
+  transition-delay: 0.4s;
+}
+.home-section1 ul li:hover a figure div .line3{
+  width: 0;
+  transition-delay: 0.2s;
+}
+.home-section1 ul li:hover a figure div .line4{
+  height:0;
+  transition-delay: 0s;
+}
+.home-section1 ul li a figure figcaption h3::before{
+  transition: all 0.4s;
+}
+.home-section1 ul li:hover a figure figcaption h3::before{
+  width: 0;
+}
+/* section1 scroll motion */
+.home-section1 ul li{transform: scale(0);transition: transform 1s;}
+.home-section1 ul li.active{transform: scale(1);}
+/* --------------------------------------------------------------------- */
+.home-section2{/* 모션적용시 스크롤이 생길경우 숨겨줘야함 */
+  overflow: hidden;
+}
+.home-section2 h3{
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--sub-color);
+}
+.home-section2 .wrap h3{
+  margin-bottom: 10px;
+}
+.home-section2 .news-list{
+  height: 30px;
+  overflow: hidden;
+  background-color: var(--gray-color);
+  color: #fff;
+  padding: 0 10px;
+}
+.home-section2 .news-list ul li{
+  height: 30px;
+  line-height: 30px;
+}
+.home-section2 .news-list ul{
+  animation: roll 10s infinite linear;
+}
+.home-section2 .news-list:hover ul{
+  animation-play-state: paused;
+}
+.home-section2 .news-list:hover a{
+  text-decoration: underline;
+  color: var(--point-color);
+}
+@keyframes roll{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(-100%);}
+}
+.home-section2 h3::before{
+  content: "";
+  display: block;
+  margin-bottom: 5px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--main-color);
+}
+.home-section2 .news{
+  padding: 20px 0;
+  background-color: #eee;
+}
+.home-section2 .wrap{
+  padding: 40px 0;
+}
+.home-section2 .wrap section{
+  box-sizing: border-box;
+}
+
+.home-section2 .notice li{
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0 ;
+  border-bottom:1px solid #eee;
+}
+.home-section2 .notice li a:hover{
+  color: var(--point-color);
+}
+.home-section2 .notice li a::before{
+  content: "·";
+  margin-right: 5px;
+}
+.home-section2 .notice li a:hover{
+  color: var(--point-color);
+}
+.home-section2 .banner .tel{
+  display: block;
+  margin: 10px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--point-color);
+}
+.home-section2 .banner .contact{
+  display: block;
+  padding: 8px;
+  text-align: center;
+  background-color: var(--dark-color);
+  color: white;
+}
+.home-section2 .gallery ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home-section2 .gallery ul li{
+  border: 5px solid var(--main-color);
+  box-sizing: border-box;
+  margin: 15px 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  position: relative;
+  overflow: hidden;
+}
+.home-section2 .gallery ul li::before{
+  content: '';
+  display: block;
+  padding-top:100%;
+}
+.home-section2 .gallery ul li a img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(70%);
+  transition: all 0.5s;
+}
+.home-section2 .gallery ul li::after{
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 50%;
+  pointer-events: none;/* 마우스무시 */
+  transition: all 0.5s;
+}
+.home-section2 .gallery ul li:hover img{
+  filter: brightness(100%);
+  transform: scale(1.2);
+}
+.home-section2 .gallery ul li:hover::after{
+  opacity: .1;
+}
+@media screen and (min-width:1200px){
+  .home-section2 .news .center-width{
+    display: flex;
+    align-items: center;
+  }
+  .home-section2 .news .center-width h3{
+    margin-right: 20px;
+  }
+  .home-section2 .wrap{
+    display: flex;
+  }
+  .home-section2 .wrap .notice{
+    width: 25%;
+    padding-right: 30px;
+  }
+  .home-section2 .wrap .gallery{
+    width: 50%;
+    border: 1px solid #ccc;
+    border-top:none ;
+    border-bottom:none ;
+    padding: 0 30px;
+  }
+  .home-section2 .wrap .banner{
+    width: 25%;
+    padding-left: 30px;
+  }
+  .home-section2 .gallery ul li{
+    width: 24%;
+  }
+}
+@media screen and (min-width:700px) and (max-width:1200px){
+  .home-section2 .wrap{position: relative;}
+  .home-section2 .wrap .notice{
+    width: 47%;
+  }
+  .home-section2 .wrap .banner{
+    width: 47%;
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+  .home-section2 .gallery ul li{
+    width: 24%;
+  }
+}
+@media screen and (max-width:700px){
+  .home-section2 .gallery ul li{
+    width: 48%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .home-section2 .news .center-width h3{
+    margin-bottom: 10px;
+  }
+  .home-section2 .wrap section:not(.banner){
+    margin-bottom: 30px;
+  }
+}
+/* section2 scroll motion */
+.home-section2 .news{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s;
+}
+.home-section2 .news.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.home-section2 .notice{
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: transform 1s, opacity 1s;
+}
+.home-section2 .notice.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+.home-section2 .gallery{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+}
+.home-section2 .gallery.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-section2 .banner{
+  transform: translateX(300px);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+.home-section2 .banner.active{
+  transform: translateX(0);
+  opacity: 1;
+}

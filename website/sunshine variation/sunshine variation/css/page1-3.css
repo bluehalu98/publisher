@@ -1,0 +1,27 @@
+.page1-3-section1 p{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.page1-3-section1 iframe{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+}
+.page1-3-section1 .youtube-container{
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 800px;
+}
+.page1-3-section1 .youtube-container::before{
+/* 
+  사각형 높이를 줄때 자식객체를 하나 만든뒤 
+  padding-top, bottom으로 100%를 줄경우 부모의 넓이만큼 높이가 생긴다 
+  - margin의 경우에도 줄경우 부모의 넓이만큼 %를 갖는다
+*/
+  content: '';
+  display: block;
+  padding-top: 56.25%;/* 315/560*100 */
+}

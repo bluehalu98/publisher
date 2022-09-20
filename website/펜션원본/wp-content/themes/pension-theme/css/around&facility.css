@@ -1,0 +1,78 @@
+section.page-around ul li,
+section.page-facility ul li {
+  margin: 20px 0;
+}
+section.page-around ul li h3,
+section.page-facility ul li h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--dark-color);
+  border-bottom: 1px solid var(--main-color);
+}
+section.page-around ul li h3::after,
+section.page-facility ul li h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--dark-color);
+}
+section.page-around ul li p,
+section.page-facility ul li p {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  border-left: 1px solid #ddd;
+}
+section.page-around ul li p::before,
+section.page-facility ul li p::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 2px;
+  height: 45%;
+  background-color: #bbb;
+}
+section.page-around ul li figure,
+section.page-facility ul li figure {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+section.page-around ul li figure img,
+section.page-facility ul li figure img {
+  width: 100%;
+}
+
+section.page-facility > ul > li > ul {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  color: #DDD;
+  background-color: var(--dark-color);
+  padding: 5px;
+}
+section.page-facility > ul > li > ul > li {
+  margin: 10px 0;
+  text-align: center;
+  border-bottom: 1px dotted #fff;
+}
+section.page-facility > ul > li > ul > li::before {
+  content: "\f071";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+section.page-facility > ul > li > ul > li::before {
+  margin-right: 5px;
+  color: var(--main-color);
+}

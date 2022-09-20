@@ -1,0 +1,88 @@
+.room-title {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+.room-title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  border-bottom: 1px dotted var(--main-color);
+}
+.room-title span {
+  position: relative;
+  padding: 0 20px;
+  background: #FFF;
+}
+
+.room-info-meta {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--main-color);
+}
+.room-info-meta dt, .room-info-meta dd {
+  box-sizing: border-box;
+  padding: 7px;
+}
+@media screen and (min-width: 800px) {
+  .room-info-meta dt, .room-info-meta dd {
+    border-bottom: 1px solid #DDD;
+  }
+}
+.room-info-meta dt {
+  background: var(--dark-color);
+  color: #FFF;
+}
+@media screen and (min-width: 800px) {
+  .room-info-meta dt {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .room-info-meta dt {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .room-info-meta dd {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .room-info-meta dd {
+    width: 100%;
+  }
+}
+
+.book-guide-link {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 500px;
+  border: 1px solid var(--dark-color);
+  border-radius: 50px;
+}
+.book-guide-link li {
+  flex: 1;
+}
+.book-guide-link li a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.book-guide-link li a.book-link {
+  background: var(--dark-color);
+  color: #FFF;
+}
+.book-guide-link li a:hover {
+  background: var(--main-color);
+  color: #FFF;
+}/*# sourceMappingURL=single-room-detail.css.map */

@@ -1,0 +1,38 @@
+header{
+  width: 1000px;
+  height: 60px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+h1{
+  height: 60%;
+}
+img{
+  height: 100%;
+}
+header nav a{
+  margin: 0 3px;
+}
+nav.gnb{
+  margin: 10px auto;
+  height: 45px;
+  width: 1000px;
+  background-color: #ddd;
+}
+nav.gnb ul{
+  height: inherit;
+  display: flex;
+  justify-content: center;
+}
+nav.gnb ul li a{
+  display: block;
+  height: 100%;
+  padding: 0 20px;
+  line-height: 45px;
+}
+nav.gnb ul li a:hover{
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,50 @@
+@import 'mixin';
+
+.faq-list-container{
+  li{
+    button{
+      display: block;
+      width: 100%;
+      padding: 7px;
+      font-weight: 600;
+      text-align: left;
+      border-bottom: 1px dotted #ccc;
+      @include icon-font(before, '\f059');
+      @include icon-font(after, '\2b');
+      &::before{
+        margin-right: 10px;
+        color: var(--main-color);
+        font-size: 1.2em;
+      }
+      &::after{
+        float: right;       
+        margin-top: 5px;
+        color: var(--main-color); 
+      }
+      &.active{
+        color: var(--main-color);
+        &::after{
+          content: '\f068';
+        }
+      }
+    }
+    &:last-child button{
+      border-bottom: none;
+    }
+    div{
+      @include clearFix;
+      display: none;
+      padding: 10px;
+      background-color: #eee;
+      p{
+        margin-bottom: 10px;
+      }
+      a{
+        float: right;
+        padding: 5px 10px;
+        background-color: var(--dark-color);
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/5c078cf8a0.js" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/window.js"></script>
+  <script src="./js/smoothScroll.js"></script>
+  <script src="./js/script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <figure>
+    <img class="tea" src="./img/tea.png" alt="">
+    <img class="cup" src="./img/cup.png" alt="">
+  </figure>
+  <svg>
+    <filter id="filter">
+      <feTurbulence id="water" numOctaves="5" seed="3" baseFrequency="0.02 0.5" />
+      <feDisplacementMap scale="20" in="SourceGraphic" />
+      <animate href="#water" attributeName="baseFrequency" keyTimes="0;0.5;1" values="0.002;0.008;0.002" dur="1s" repeatCount="indefinite"/>
+    </filter>
+  </svg>
+</body>
+</html>

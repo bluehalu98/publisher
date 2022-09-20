@@ -1,0 +1,97 @@
+@mixin hidden{
+  position: fixed;
+  left:-10000px
+}
+
+@mixin clearfix{
+  &::after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin icon-font($pseudo,$code){
+  &::#{$pseudo}{
+    content:$code;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+  }
+}
+
+
+
+@mixin barBtn($color,$before,$after){
+  width: 50px;
+  height: 50px;
+  span{
+    position: absolute;
+    left:7px;
+    height: 2px;
+    background: $color; 
+    transition: width 0.2s, margin-top 0.2s, transform 0.2s, opacity 0.2s;//ddd
+    transition-delay:0.5s,0.5s,0s,0s ;
+    &.line1{
+      width: 35px;
+      margin-top: -7px;
+    }//line1
+    &.line2{
+      width: 25px;
+    }//line2
+    &.line3{
+      width: 15px;
+      margin-top: 7px;
+    }//line3
+  }//span
+  &::before,&::after{
+    position: absolute;
+    left:0;
+    bottom:-10%;
+    width: 100%;
+    text-align: center;
+    color:$color;    
+    font-size: 0.8em;
+    transition: opacity 0.5s; 
+  }
+  &::before{
+    content:$before;
+  }//before
+  &::after{
+    opacity:0;
+    content:$after;
+  }//after
+  &:hover{
+    span{
+      width: 35px;
+    }
+  }//mbtn:hover
+  &.active{
+    &::before{
+      opacity:0;
+    }
+    &::after{
+      opacity:1;
+    }
+    span{
+      margin-top: 0;
+      width: 35px;
+      transition-delay:0s,0s,0.5s,0.5s ;//ttt
+      &.line1{
+        transform: rotate(45deg);
+      }//line1
+      &.line2{
+        transform: translateX(-50px);
+        opacity: 0;
+      }//line2
+      &.line3{
+        transform: rotate(-45deg);
+      }//line3
+    }//span
+  }//mbtn.active
+}//barBtn
+
