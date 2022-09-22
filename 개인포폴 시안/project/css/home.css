@@ -1,0 +1,15 @@
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 500px;
+  text-align: center;
+  padding-top: 100px;
+}
+main section.sunshine-section {
+  text-align: initial;
+}
+main section.sunshine-section h2 {
+  font-size: 2em;
+  font-weight: 900;
+}/*# sourceMappingURL=home.css.map */
