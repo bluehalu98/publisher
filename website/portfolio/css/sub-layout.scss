@@ -1,0 +1,61 @@
+section.content-section{
+  border-top: 4px solid #ddd;
+  text-align: initial;
+  h2{
+    margin: 30px 0 30px 15px;
+    font-size: 2em;
+    font-weight: 900;
+  } 
+  figure.img-container{
+    padding: 10px;
+    div.dummy-img{
+      min-height: 400px;
+      &.sunshine-img{
+        background-color: #9e8c76;
+      }
+      &.pension-img{
+        background-color: #8b9674;
+      }
+      &.newbird-img{
+        background-color: #FFE618; 
+      }
+      &.newbird-img{
+        background-color: #FFE618;
+      }
+      &.newbird-img{
+        background-color: #FFE618;
+      }
+      div{
+        border: 1px solid #eee;
+        padding: 1px;
+        box-shadow: 0 0 20px rgba(#000,.2);
+      }//div
+      a.link-button{
+        display: inline-block;
+        position: absolute;
+        padding: 10px 30px;
+        border-radius: 15px;
+        background-color: #000;
+        color: #fff;
+        transition: all 0.3s;
+        i{
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }//link button
+    }//img
+    figcaption{
+      padding: 20px 0 10px 30px;
+      width: 60%;
+      dl{
+        dt{
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+        dd{
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }//figure content section
+}

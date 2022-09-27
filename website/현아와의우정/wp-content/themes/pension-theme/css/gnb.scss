@@ -1,0 +1,160 @@
+@import './mixin';
+
+.gnb{
+  position: fixed;
+  z-index: 101;
+  right: 0;
+  width: 90%;
+  max-width: 400px;
+  background-color: var(--dark-color);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  &.active{
+    transform: translateX(0);
+    .menu-wrap .menu-menu-container>ul>li{
+      transform: translateX(0);
+      opacity: 1;
+      @for $i from 1 through 5{
+        &:nth-child(#{$i}){ transition-delay: #{0.2*$i}s;}
+      }
+    }
+  }
+  @media screen and (min-width:1000px){
+    top:90px;
+    height: calc(100% - 90px);
+  }
+  @media screen and (max-width:1000px){
+    top:70px;
+    height: calc(100% - 70px);
+  }
+  .menu-wrap{
+    width: 80%;
+    height: 400px;
+    /* 가로 스크롤 제거 */
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 50px auto;
+    div.menu-menu-container{
+      >ul{
+        >li{
+          &:last-child{ //회원메뉴
+            display: none;
+          }
+          margin-bottom: 10px;
+          transform: translateX(50%);
+          opacity: 0;
+          transition: all 0.3s;
+          >a{
+            display: block;
+            font-size: 1.1em;
+            color: #999;
+            font-weight: 500;
+            letter-spacing: 0.1em; 
+            transition: all 0.3s;
+            @include icon-font(after,'\2b');  
+            &:hover{
+              color: #ccc;
+            }
+            &::after{
+              float:right
+            }
+            &.active{
+              color: #ccc;
+              &::after{
+                content: '\f068';
+              }
+            }//호버줘야된데
+          }//1dep a
+          >ul{
+            display: none;
+            >li{
+              >a{
+                font-size: 0.95em;
+                display: block;
+                padding: 5px 10px;
+                color: #888;
+                transition: all 0.3s;
+                &::before{
+                  content: '- ';
+                }
+                &[aria-current]{
+                  color: var(--main-color);
+                }
+                &:hover{
+                  color: var(--main-color);
+                }
+              }//2dep a
+            }//2dep li
+          }//2dep ul
+        }//1dep li
+      }//1dep ul
+    }
+  }
+  ul.login-menu{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 90px;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    li{
+      margin: 0 10px;
+      a{
+        display: block;
+        padding: 5px 20px;
+        border-radius: 10px;
+        background-color: var(--gray-color);
+        color: #888;
+        font-weight: 600;
+      }
+    }
+  }
+  .sns{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-color);
+    li{
+      margin-left: -1px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #888;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 30px;
+        color:#888;
+      }
+    }
+    &::before{
+      content: 'FOLLOW US';
+      color: #888;
+      margin-right: 15px;
+      font-size: 0.8em;
+    }
+  }
+}
+div.nav-bg{
+  content: '';
+  position: fixed;
+  width: 100%;
+  background-color:rgba(#000,0.7);
+  z-index: 99;
+  display: none;
+  transition: opacity 1s;
+  @media screen and (min-width:1000px){
+    top:90px;
+    height: calc(100% - 90px);
+  }
+  @media screen and (max-width:1000px){
+    top:70px;
+    height: calc(100% - 70px);
+  }
+}

@@ -1,0 +1,76 @@
+@import 'mixin';
+section.page-around,
+section.page-facility{
+  >ul{
+    >li{
+      margin: 20px 0;
+      h3{
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: var(--dark-color);
+        border-bottom: 1px solid var(--main-color);
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 50px;
+          height: 2px;
+          background-color: var(--dark-color);
+        }
+      }//h3
+      p{
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background: #EEE;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2px;
+          height: 20px;
+          background: #CCC;
+        }
+      }
+      figure{
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+        img{width: 100%;}
+      }
+      >ul{
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #CCC;
+        color: #CCC;
+        background: var(--dark-color);
+        >li{
+          padding: 5px 0;
+          border-bottom: 1px dotted #999;
+          @include icon-font(before,'\f071');
+          &::before {
+            margin-right: 5px;
+            color: #f9bf26;
+        }
+        }
+      }
+    }
+  }
+}
+

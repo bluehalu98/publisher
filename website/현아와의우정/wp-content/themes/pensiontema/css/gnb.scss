@@ -1,0 +1,164 @@
+@import "./mixin";
+.gnb {
+  position: fixed;
+  right: 0;
+  width: 90%;
+  z-index: 101;
+  max-width: 400px;
+  background: var(--dark-color);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  &.active{
+    transform: translateX(0); //gnb 액티브
+    .menu-wrap .menu-menu-container>ul>li{
+      transform: translateX(0);
+      opacity: 1;
+      @for $i from 1 through 5{
+        &:nth-child(#{$i}){transition-delay: #{0.2*$i}s;}
+      }
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    top: 90px;
+    height: calc(100% - 90px);
+  }
+  @media screen and (max-width: 1000px) {
+    top: 70px;
+    height: calc(100% - 70px);
+  }
+  .menu-wrap {
+    width: 80%;
+    height: 350px;
+    overflow: hidden;
+    overflow-y: auto;
+    /* 가로스크롤 제거 */
+    margin: 50px auto;
+    .menu-menu-container {
+      > ul {
+        > li {
+          margin-bottom: 10px;
+          //gnb-motion
+          transform: translateX(50%);
+          opacity: 0;
+          transition: all 0.3s;
+          > a {
+            @include icon-font(after, "\2b");
+            display: block;
+            font-size: 1.1em;
+            color: #999;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            &::after {
+              float: right;
+            }
+            &.active {
+              color: #ccc;
+              &::after {
+                content: "\f00c";
+              }
+            }
+            &.active::after {
+              content: "\f00c";
+            }
+          } //1dep a
+
+          > ul {
+            display: none;
+            > li {
+              a {
+                display: block;
+                padding: 5px 10px;
+                color: #888;
+                font-size: 0.9em;
+                &::before {
+                  content: "- ";
+                }
+              } //2dep
+            }
+          }
+        }
+      }
+    }
+  }
+  .login-menu {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 90px;
+    li{
+      margin: 0 10px;
+      a{
+        display: block;
+        padding: 5px 20px;
+        border-radius: 10px;
+        background: var(--gray-color);
+        font-weight: 600;
+        color: #888;
+      }
+    }
+  }
+  .sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: var(--gray-color);
+    &::before {
+      content: "FOLLOW US";
+      color: #888;
+      margin-right: 20px;
+      font-size: 0.8em;
+    }
+    li {
+      margin-left: -1px; /* 선에 투명도가있으면 오른쪽 선 없애고, 마지막꺼만 보더 right 주면됨 */
+      width: 30px;
+      height: 30px;
+      border: 1px solid #888;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 30px;
+        color: #888;
+      }
+    }
+  }
+} //gnb
+
+.nav-bg{ /*   transition: opacity 1s;  디스플레이 none상태에서는 트랜지션해도 안됨 */
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background: rgba(#000,0.7);
+  @media screen and (min-width: 1000px){
+    top: 90px;
+    height: calc(100% - 90px);
+  }
+  @media screen and (max-width: 1000px){
+    top: 70px;
+    height: calc(100% - 70px);
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 1000px) {
+}

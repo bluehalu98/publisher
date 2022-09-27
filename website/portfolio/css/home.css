@@ -1,0 +1,10 @@
+main {
+  background: linear-gradient(#fff, 20%, #eee);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 500px;
+  text-align: center;
+  padding-top: 100px;
+}/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,73 @@
+@import "mixin";
+.section-guide{
+  padding: 20px 0;
+  h3{
+    margin-bottom: 10px;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: var(--dark-color);
+    @include icon-font(before,'\f304');
+    &::before{
+      margin-right:10px;
+    }
+  }
+  >ul{
+    padding: 10px;
+    border: 1px solid #DDD;
+    >li{
+      padding: 7px 0;
+      border-bottom: 1px dotted #ddd;
+      @include icon-font(before,'\f00c');
+      &::before{
+        margin-right:10px;
+      }
+      &:last-child{
+        border: none;
+      }
+      >ul{
+        >li{
+          text-indent: 30px;
+          padding: 4px 0;
+          font-weight: 600;
+          &::before{
+            content: "- ";
+          }
+        }//li
+      }//ul
+    }//li
+  }//ul
+  &.section-guide1{
+    ul{
+      font-weight: bold;
+      color: var(--main-color);
+      background: var(--dark-color);
+    }
+  }
+  table{ //테이블은 무조건 넓이줘야함
+    width: 100%;
+    min-width: 700px;
+    td,th{
+      box-sizing: border-box;
+      width: 8.33%;
+      border: 1px solid #CCC;
+    }
+    th{
+     background: var(--dark-color);
+     color:#FFF; 
+    }
+    td{
+      text-align: center;
+      &:first-child{
+        background: var(--main-color);
+        color: #FFF;
+        font-weight: 600;
+      }
+    }
+    ruby{
+      display: inline-block;
+      font-size: 0.5em;
+      transform: translateY(-50%);
+    }
+  }
+  overflow: auto; //삐져나간부분스크롤생기게
+}//section

@@ -1,0 +1,239 @@
+@import "mixin";
+#html-element{
+  margin-top: 0 !important;
+}
+#wpadminbar {
+  display: none;
+}
+body {
+  @media screen and (min-width: 1000px) {
+    padding-top: 90px;
+    padding-left: 90px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding-top: 70px;
+  }
+}
+.site-header {
+  position: fixed;
+  display: flex;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  background: var(--gray-color);
+  &::before,&::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--dark-color);
+
+  }
+  &::before{
+    left: 0;
+    width: 30%;
+  }
+  &::after{
+    right: 0;
+    width: 15%;
+    @media screen and (max-width: 1000px) {
+      display: none;
+      }
+  }
+  @media screen and (min-width: 1000px) {
+    height: 90px; /* 높이가 고정되어있으니까, 안에 로고 이미지는 높이로 맞추는게 편함 */
+  }
+  @media screen and (max-width: 1000px) {
+    height: 70px;
+  }
+  >*{
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    height: 60%;
+    margin-left: 5%;
+    span {
+      @include hidden;
+    }
+    a {
+      img {
+        height: 100%;
+      } //img
+    } //a
+  } //h1
+  a.tel {
+    position: absolute;
+    right: 30%;
+    padding: 7px 15px; /* 원래 padding못넣는데 플렉스안에있어서 가능 */
+    border-radius: 10px;
+    font-weight: 500;
+    color: #ccc;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    background: var(--dark-color);
+    border: 1px solid #555;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  } //a
+  ul.login-menu {
+    margin-left: 55%;
+    display: flex;
+    li {
+      margin: 0 7px;
+      a {
+        font-weight: 500;
+        font-size: 0.8em;
+        color: #ccc;
+        text-transform: uppercase; /* 대문자로 */
+        letter-spacing: 0.2em; /* 자간 */
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  button.mbtn {
+    position: relative;
+    margin-right: 5%;
+    width: 50px;
+    height: 50px;
+    span {
+      position: absolute;
+      left: 7px;
+      height: 2px;
+      background: var(--main-color);
+      transition: width 0.2s, margin-top 0.2s, transform 0.2s , opacity 0.2s;
+      transition-delay: 0.5s,0.5s,0,0;
+      &.line1 {
+        width: 35px;
+        margin-top: -7px;
+      }
+      &.line2 {
+        width: 25px;
+      }
+      &.line3 {
+        width: 15px;
+        margin-top: 7px;
+      }
+    } //span
+    &::before,
+    &::after {
+      position: absolute;
+      width: 100%;
+      bottom: -15%;
+      left: 0;
+      text-align: center;
+      color: var(--main-color);
+      font-size: 0.8em;
+      transition: opacity 0.5s;
+    }
+    &::after {
+      content: "OPEN";
+    }
+    &::before {
+      opacity: 0;
+      content: "ClOSE";
+    }
+  } /* mbtn */
+
+  button.mbtn.active {
+    &::after {
+      opacity: 0;
+    }
+    &::before {
+      opacity: 1;
+    }
+    span{
+      width: 35px;
+      margin-top: 0;
+      transition-delay: 0s, 0s, 0.3s, 0.3s; //t-d
+      &.line1{
+        transform: rotate(45deg);
+      }
+      &.line2{
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      &.line3{
+        transform: rotate(-45deg);
+      }
+    }//span
+  }//mbtn.active
+  button.mbtn:hover{
+    span{
+      width: 35px;
+    }
+  }
+} /* site-header */
+/* ---------------------------------------------- */
+.sidebar-left{
+  position: fixed;
+  width: 90px;
+  top: 90px;
+  left: 0;
+  height: calc(100% - 90px);
+  background: var(--gray-color);
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+  .bread-crumb{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45%;
+    width: 40px;
+    margin: 0 auto;
+    background: var(--dark-color);
+    transform: rotate(-180deg);
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      top: 0;
+      left: 0;
+      background: var(--main-color);
+    }
+    li{
+      writing-mode: vertical-lr;
+      text-transform: uppercase;
+      color: #AAA;
+      font-size: 0.85em;
+      &:last-child::after{
+        display: none;
+      }
+      &::after{
+        content: '|';
+        margin: 5px 0;
+      }
+      i{
+        transform: rotate(90deg) translateY(-2px);
+        margin-bottom: 5px;
+        color: var(--main-color);
+      }
+    }
+  }//bread
+  .sns{
+    position: absolute;
+    left: 30px;
+    bottom: 90px;
+    li{
+      border: 1px solid #666;
+      margin-bottom: -1px;
+      a{
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+  }
+}

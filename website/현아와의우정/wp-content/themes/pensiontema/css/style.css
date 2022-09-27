@@ -1,0 +1,12 @@
+:root{
+  --main-color:#f9bf26;
+  --sub-color:#fff0ca;
+  --dark-color:#26262b;
+  --gray-color:#38383b;
+}
+body{
+  font-family:'Montserrat','Noto Sans KR', sans-serif;
+  font-size: 13px;
+  line-height: 160%;
+  color:#666;
+}

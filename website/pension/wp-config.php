@@ -21,11 +21,11 @@
 // ** MySQL settings - You can get this info from your web host ** //
 
 /**수정시작 */
-define( 'DB_NAME', 'kjhweb1' ); //dbname
-define( 'DB_USER', 'kjhweb1' );//db user id
-define( 'DB_PASSWORD', 'rlawlsgud0622!' );//db password
-define('WP_HOME', 'http://kjhweb1.dothome.co.kr');
-define('WP_SITEURL','http://kjhweb1.dothome.co.kr');
+define( 'DB_NAME', 'bluehalu' ); //dbname
+define( 'DB_USER', 'bluehalu' );//db user id
+define( 'DB_PASSWORD', 'halu@980101' );//db password
+define('WP_HOME', 'http://bluehalu.dothome.co.kr');
+define('WP_SITEURL','http://bluehalu.dothome.co.kr');
 /**수정끝 */
 
 /** MySQL hostname */

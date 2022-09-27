@@ -1,0 +1,57 @@
+body {
+  background-image: url(../img/body-bg.jpg);
+  background-position: center;
+  background-size: 100% 10000%;
+  background-position: center;
+}
+
+header {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 500px;
+  text-align: center;
+  padding-top: 100px;
+}
+header div.header-top {
+  background: linear-gradient(#eee, 20%, #fff);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-top: 100px;
+}
+header div.header-top h1 {
+  padding-left: 30px;
+  font-weight: 900;
+  font-size: 3em;
+  letter-spacing: 30px;
+}
+header div.header-top figure.img-container {
+  width: 200px;
+  height: 200px;
+  margin: 80px auto;
+}
+header div.header-top figure.img-container div.portrait {
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  margin-bottom: 80px;
+}
+header div.header-top figcaption dl {
+  padding: 0 25% 0 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header div.header-top figcaption dl dt, header div.header-top figcaption dl dd {
+  margin-bottom: 20px;
+}
+header div.header-top figcaption dl dt {
+  width: 15%;
+  text-align: right;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+header div.header-top figcaption dl dd {
+  width: 80%;
+  text-align: left;
+  line-height: 22px;
+}/*# sourceMappingURL=header.css.map */

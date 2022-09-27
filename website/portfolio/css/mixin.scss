@@ -1,0 +1,33 @@
+@mixin hidden{
+  position: fixed;
+  left:-10000px
+}
+
+@mixin icon-font($pseudo,$code){
+  &::#{$pseudo}{
+    content:$code;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto; 
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+  }
+}
+
+@mixin pos-center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin color-ref($color){
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: $color;
+  margin: 0 5px;
+}

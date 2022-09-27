@@ -1,0 +1,33 @@
+section.visual-story {
+  margin-bottom: 30px;
+  padding: 7px;
+  background: #EEE;
+  border: 1px solid #CCC;
+}
+section.visual-story figure {
+  border: 1px solid #CCC;
+  background-image: url(../img/sub1/sub1-1.jpg);
+  filter: url(#filter);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.visual-story figure img {
+  opacity: 0;
+  width: 100%;
+}
+
+section.greet-story h3 {
+  padding: 5px;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+section.greet-story h3 i {
+  transform: scaleX(-1);
+}
+section.greet-story p {
+  padding: 20px;
+  background: linear-gradient(rgba(249, 191, 38, 0.3), rgba(249, 191, 38, 0));
+  color: var(--dark-color);
+}

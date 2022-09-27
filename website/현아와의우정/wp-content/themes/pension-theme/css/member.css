@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* 100%높이설정 */
+/* button */
+/* 로그인---------------------------------------------- */
+div#wpmem_login {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #EEE;
+  box-sizing: border-box;
+}
+
+div#wpmem_login form fieldset {
+  margin: 0;
+}
+
+div#wpmem_login form fieldset legend {
+  /* 로그인 타이틀 */
+  text-align: center;
+  font-size: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #CCC;
+}
+
+div#wpmem_login form fieldset legend::before {
+  content: "회원로그인";
+  display: inline-block;
+  font-size: 15px;
+  color: #333;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+}
+
+div#wpmem_login form fieldset > label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  color: #999;
+}
+
+div#wpmem_login form fieldset div.div_text {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+div#wpmem_login form fieldset div.button_div {
+  width: 100%;
+  margin: 0;
+}
+
+div#wpmem_login form fieldset div.button_div label {
+  font-size: 0.8em;
+  color: #999;
+}
+
+div#wpmem_login form fieldset div.button_div input[type='submit'] {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  background: #333;
+  color: #FFF;
+  transition: all 0.3s;
+}
+
+div#wpmem_login form fieldset div.button_div input[type='submit']:hover {
+  background: #f9bf26;
+}
+
+/* 회원가입, 회원정보---------------------------------------------- */
+div#wpmem_reg form fieldset {
+  margin: 0;
+}
+
+div#wpmem_reg form fieldset legend {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+div#wpmem_reg form fieldset > label {
+  font-size: 0.8em;
+  color: #999;
+  font-weight: 600;
+}
+
+div#wpmem_reg form fieldset div.div_text {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+div#wpmem_reg form fieldset div.button_div {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+div#wpmem_reg form fieldset div.button_div input[type='submit'] {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  background: #333;
+  color: #FFF;
+  transition: all 0.3s;
+}
+
+div#wpmem_reg form fieldset div.button_div input[type='submit']:hover {
+  background: #f9bf26;
+}
+
+div#wpmem_reg form fieldset div.req-text {
+  display: none;
+}
+
+b.login-message {
+  color: #666;
+  font-weight: bold;
+}
+
+b.login-id {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #f9bf26;
+}
+
+b.login-id::after, b.login-id::before {
+  content: "'";
+}
+
+#wpmem_login + #wpmem_reg{
+  display: none;
+}
