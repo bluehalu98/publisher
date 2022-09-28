@@ -1,0 +1,27 @@
+@import 'mixin';
+.newbird-section{
+  figure.img-container{
+    .newbird-img{
+      position: relative;
+      .img1-container{
+        img{width: 100%;height: 100%;object-fit: contain;}
+      }
+      a.link-button{
+        bottom: 20px;
+        right: 20px;
+        :hover{
+          background-color: #444 !important;
+          color: #ffe618;
+        }
+      }
+    }//div newbird img
+  }//figure img container
+  figcaption{
+    b{
+      &.color-fff325{@include color-ref(#fff325)}
+      &.color-ffe618{@include color-ref(#ffe618)}
+      &.color-eaebed{@include color-ref(#eaebed)}
+      &.color-111427{@include color-ref(#111427)}
+    }
+  }
+}

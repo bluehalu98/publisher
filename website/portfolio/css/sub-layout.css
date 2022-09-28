@@ -13,11 +13,16 @@ section.content-section figure.img-container {
 section.content-section figure.img-container div.dummy-img {
   min-height: 400px;
 }
+@media screen and (max-width: 600px) {
+  section.content-section figure.img-container div.dummy-img {
+    min-height: 250px;
+  }
+}
 section.content-section figure.img-container div.dummy-img.sunshine-img {
   background-color: #9e8c76;
 }
 section.content-section figure.img-container div.dummy-img.pension-img {
-  background-color: #8b9674;
+  background-color: #38383b;
 }
 section.content-section figure.img-container div.dummy-img.newbird-img {
   background-color: #FFE618;
@@ -42,13 +47,16 @@ section.content-section figure.img-container div.dummy-img a.link-button {
   color: #fff;
   transition: all 0.3s;
 }
+section.content-section figure.img-container div.dummy-img a.link-button:hover {
+  background-color: #fff;
+}
 section.content-section figure.img-container div.dummy-img a.link-button i {
   display: inline-block;
   margin-left: 10px;
 }
 section.content-section figure.img-container figcaption {
   padding: 20px 0 10px 30px;
-  width: 60%;
+  width: 70%;
 }
 section.content-section figure.img-container figcaption dl dt {
   font-weight: 700;
@@ -56,4 +64,10 @@ section.content-section figure.img-container figcaption dl dt {
 }
 section.content-section figure.img-container figcaption dl dd {
   margin-bottom: 25px;
+}
+@media screen and (min-width: 800px) {
+  section.content-section figure.img-container figcaption dl dd:last-child {
+    width: 100%;
+    max-width: 500px;
+  }
 }/*# sourceMappingURL=sub-layout.css.map */

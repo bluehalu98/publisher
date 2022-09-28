@@ -1,0 +1,48 @@
+.newbird-section figure.img-container .newbird-img {
+  position: relative;
+}
+.newbird-section figure.img-container .newbird-img .img1-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.newbird-section figure.img-container .newbird-img a.link-button {
+  bottom: 20px;
+  right: 20px;
+}
+.newbird-section figure.img-container .newbird-img a.link-button :hover {
+  background-color: #444 !important;
+  color: #ffe618;
+}
+.newbird-section figcaption b.color-fff325 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff325;
+  margin: 0 5px;
+}
+.newbird-section figcaption b.color-ffe618 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffe618;
+  margin: 0 5px;
+}
+.newbird-section figcaption b.color-eaebed {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #eaebed;
+  margin: 0 5px;
+}
+.newbird-section figcaption b.color-111427 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #111427;
+  margin: 0 5px;
+}/*# sourceMappingURL=newbird.css.map */

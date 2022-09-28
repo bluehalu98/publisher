@@ -2,7 +2,6 @@ section.sunshine-section figure.img-container div.sunshine-img {
   position: relative;
 }
 section.sunshine-section figure.img-container div.sunshine-img a.link-button:hover {
-  background-color: #fff;
   color: #9E8C76;
 }
 @media screen and (min-width: 1350px) {
@@ -64,21 +63,48 @@ section.sunshine-section figure.img-container div.sunshine-img a.link-button:hov
     margin-right: 4%;
     margin-bottom: 20px;
   }
+}
+@media screen and (max-width: 1350px) and (max-width: 450px) {
+  section.sunshine-section figure.img-container div.sunshine-img div {
+    margin-right: 2%;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1350px) {
   section.sunshine-section figure.img-container div.sunshine-img div img {
     width: 100%;
   }
+}
+@media screen and (max-width: 1350px) {
   section.sunshine-section figure.img-container div.sunshine-img div.img1-container {
     float: left;
     margin-left: 4%;
     margin-top: 20px;
   }
+}
+@media screen and (max-width: 1350px) and (max-width: 450px) {
+  section.sunshine-section figure.img-container div.sunshine-img div.img1-container {
+    margin-left: 2%;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1350px) {
   section.sunshine-section figure.img-container div.sunshine-img div.img3-container {
     margin-top: 20px;
   }
+}
+@media screen and (max-width: 1350px) and (max-width: 450px) {
+  section.sunshine-section figure.img-container div.sunshine-img div.img3-container {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1350px) {
   section.sunshine-section figure.img-container div.sunshine-img a.link-button {
     left: 40px;
     bottom: 40px;
   }
+}
+@media screen and (max-width: 1350px) {
   section.sunshine-section figure.img-container div.sunshine-img::after {
     content: "";
     clear: both;

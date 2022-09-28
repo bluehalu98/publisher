@@ -1,0 +1,36 @@
+@import 'mixin';
+.pension-section{
+  .img-container{
+    div.pension-img{
+      position: relative;
+      .img1-container{
+        border: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @media screen and (max-width:800px) {
+          box-shadow: none;
+          padding: 0;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      a.link-button{
+        bottom: 20px;
+        right: 20px;
+        &:hover{color: #38383b;}
+      }
+    }//div pension img
+  }//figure img container
+  figcaption{
+    b{
+      &.color-f9bf26{@include color-ref(#f9bf26)}
+      &.color-fff0ca{@include color-ref(#fff0ca)}
+      &.color-26262b{@include color-ref(#26262b)}
+      &.color-38383b{@include color-ref(#38383b)}
+    }
+  }
+}//pension section

@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="./css/home.css">
   <link rel="stylesheet" href="./css/sub-layout.css">
   <link rel="stylesheet" href="./css/sunshine.css">
+  <link rel="stylesheet" href="./css/pension.css">
+  <link rel="stylesheet" href="./css/newbird.css">
   <title>Portfolio</title>
 </head>
 <body> 

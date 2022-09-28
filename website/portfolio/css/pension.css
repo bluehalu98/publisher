@@ -1,0 +1,59 @@
+.pension-section .img-container div.pension-img {
+  position: relative;
+}
+.pension-section .img-container div.pension-img .img1-container {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 800px) {
+  .pension-section .img-container div.pension-img .img1-container {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+.pension-section .img-container div.pension-img .img1-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pension-section .img-container div.pension-img a.link-button {
+  bottom: 20px;
+  right: 20px;
+}
+.pension-section .img-container div.pension-img a.link-button:hover {
+  color: #38383b;
+}
+.pension-section figcaption b.color-f9bf26 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #f9bf26;
+  margin: 0 5px;
+}
+.pension-section figcaption b.color-fff0ca {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff0ca;
+  margin: 0 5px;
+}
+.pension-section figcaption b.color-26262b {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #26262b;
+  margin: 0 5px;
+}
+.pension-section figcaption b.color-38383b {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #38383b;
+  margin: 0 5px;
+}/*# sourceMappingURL=pension.css.map */

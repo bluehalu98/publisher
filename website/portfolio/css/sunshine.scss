@@ -3,10 +3,7 @@ section.sunshine-section{
   figure.img-container{
     div.sunshine-img{ 
       position: relative;
-      a.link-button:hover{
-        background-color: #fff;
-        color: #9E8C76;
-      }
+      a.link-button:hover{color: #9E8C76;}
     }
     @media screen and (min-width:1350px) {
       div.sunshine-img{
@@ -59,6 +56,10 @@ section.sunshine-section{
           width: 40%;
           margin-right: 4%;
           margin-bottom: 20px;
+          @media screen and (max-width:450px) {
+            margin-right: 2%;
+            margin-bottom: 10px;
+          }
           img{
             width: 100%;
           }
@@ -67,9 +68,16 @@ section.sunshine-section{
           float: left;
           margin-left: 4%;
           margin-top: 20px;
+          @media screen and (max-width:450px) {
+            margin-left: 2%;
+            margin-top: 10px;
+          }
         }//img1 container
         div.img3-container{
           margin-top: 20px;
+          @media screen and (max-width:450px) {
+            margin-top: 10px;
+          }
         }
         a.link-button{
           left: 40px;

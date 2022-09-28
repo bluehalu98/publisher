@@ -10,11 +10,14 @@ section.content-section{
     padding: 10px;
     div.dummy-img{
       min-height: 400px;
+      @media screen and (max-width:600px) {
+        min-height: 250px;
+      }
       &.sunshine-img{
         background-color: #9e8c76;
       }
       &.pension-img{
-        background-color: #8b9674;
+        background-color: #38383b;
       }
       &.newbird-img{
         background-color: #FFE618; 
@@ -38,6 +41,7 @@ section.content-section{
         background-color: #000;
         color: #fff;
         transition: all 0.3s;
+        &:hover{background-color: #fff;}
         i{
           display: inline-block;
           margin-left: 10px;
@@ -46,7 +50,7 @@ section.content-section{
     }//img
     figcaption{
       padding: 20px 0 10px 30px;
-      width: 60%;
+      width: 70%;
       dl{
         dt{
           font-weight: 700;
@@ -54,6 +58,12 @@ section.content-section{
         }
         dd{
           margin-bottom: 25px;
+          &:last-child{
+            @media screen and (min-width:800px) {
+              width: 100%;
+              max-width: 500px;
+            }
+          }
         }
       }
     }
