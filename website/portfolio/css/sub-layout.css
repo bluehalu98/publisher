@@ -12,6 +12,7 @@ section.content-section figure.img-container {
 }
 section.content-section figure.img-container div.dummy-img {
   min-height: 400px;
+  position: relative;
 }
 @media screen and (max-width: 600px) {
   section.content-section figure.img-container div.dummy-img {
@@ -46,6 +47,8 @@ section.content-section figure.img-container div.dummy-img a.link-button {
   background-color: #000;
   color: #fff;
   transition: all 0.3s;
+  bottom: 20px;
+  right: 20px;
 }
 section.content-section figure.img-container div.dummy-img a.link-button:hover {
   background-color: #fff;

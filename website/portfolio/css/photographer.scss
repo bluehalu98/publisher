@@ -1,0 +1,21 @@
+@import 'mixin';
+.photographer-section{
+  figure.img-container{
+    .photographer-img{
+      position: relative;
+      .img1-container{
+        img{width: 100%;object-fit: contain;}
+      }
+      a.link-button:hover{
+        color: #211E18;
+      }
+    }
+  }
+  figcaption{
+    b{
+      &.color-27AE60{@include color-ref(#27AE60)}
+      &.color-798C7A{@include color-ref(#798C7A)}
+      &.color-211E18{@include color-ref(#211E18)}
+    }
+  }
+}

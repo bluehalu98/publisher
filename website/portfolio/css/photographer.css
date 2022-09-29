@@ -1,0 +1,34 @@
+.photographer-section figure.img-container .photographer-img {
+  position: relative;
+}
+.photographer-section figure.img-container .photographer-img .img1-container img {
+  width: 100%;
+  object-fit: contain;
+}
+.photographer-section figure.img-container .photographer-img a.link-button:hover {
+  color: #211E18;
+}
+.photographer-section figcaption b.color-27AE60 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #27AE60;
+  margin: 0 5px;
+}
+.photographer-section figcaption b.color-798C7A {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #798C7A;
+  margin: 0 5px;
+}
+.photographer-section figcaption b.color-211E18 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #211E18;
+  margin: 0 5px;
+}/*# sourceMappingURL=photographer.css.map */

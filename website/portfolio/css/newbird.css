@@ -10,7 +10,7 @@
   bottom: 20px;
   right: 20px;
 }
-.newbird-section figure.img-container .newbird-img a.link-button :hover {
+.newbird-section figure.img-container .newbird-img a.link-button:hover {
   background-color: #444 !important;
   color: #ffe618;
 }

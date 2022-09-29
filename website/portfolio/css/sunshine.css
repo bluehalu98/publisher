@@ -1,5 +1,9 @@
-section.sunshine-section figure.img-container div.sunshine-img {
-  position: relative;
+section.sunshine-section figure.img-container div.sunshine-img a.link-button {
+  width: 120px;
+  height: 40px;
+  padding: 0 !important;
+  text-align: center;
+  line-height: 40px;
 }
 section.sunshine-section figure.img-container div.sunshine-img a.link-button:hover {
   color: #9E8C76;
@@ -11,7 +15,6 @@ section.sunshine-section figure.img-container div.sunshine-img a.link-button:hov
     padding: 30px 0;
   }
   section.sunshine-section figure.img-container div.sunshine-img div.img1-container {
-    position: relative;
     width: 600px;
     height: auto;
     margin: 0 auto;

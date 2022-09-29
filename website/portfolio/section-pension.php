@@ -7,6 +7,8 @@
     </div>
     <figcaption>
       <dl>
+        <dt>레퍼런스</dt>
+        <dd>https://bdmp-007.cafe24.com/bizdemo117434/</dd>
         <dt>개발환경</dt>
         <dd>
           server : apache <br>

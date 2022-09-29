@@ -9,7 +9,7 @@
       a.link-button{
         bottom: 20px;
         right: 20px;
-        :hover{
+        &:hover{
           background-color: #444 !important;
           color: #ffe618;
         }

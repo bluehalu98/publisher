@@ -10,6 +10,8 @@ section.content-section{
     padding: 10px;
     div.dummy-img{
       min-height: 400px;
+      position: relative;
+
       @media screen and (max-width:600px) {
         min-height: 250px;
       }
@@ -41,6 +43,8 @@ section.content-section{
         background-color: #000;
         color: #fff;
         transition: all 0.3s;
+        bottom: 20px;
+        right: 20px;
         &:hover{background-color: #fff;}
         i{
           display: inline-block;

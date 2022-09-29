@@ -1,4 +1,7 @@
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </main>
+<footer>
+
+</footer>
 </body>
 </html>

@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="./css/sunshine.css">
   <link rel="stylesheet" href="./css/pension.css">
   <link rel="stylesheet" href="./css/newbird.css">
+  <link rel="stylesheet" href="./css/photographer.css">
+  <link rel="stylesheet" href="./css/calculator.css">
+  <link rel="stylesheet" href="./css/footer.css">
   <title>Portfolio</title>
 </head>
 <body> 

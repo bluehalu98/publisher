@@ -7,6 +7,8 @@
     </div>
     <figcaption>
       <dl>
+        <dt>레퍼런스</dt>
+        <dd>https://newbird.co.kr/index.html</dd>
         <dt>개발환경</dt>
         <dd>
           server : apache <br>

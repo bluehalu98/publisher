@@ -1,0 +1,15 @@
+.calculator-section figure.img-container .calculator-img {
+  position: relative;
+  background-image: url(../img/calc/calc-bg.png);
+}
+.calculator-section figure.img-container .calculator-img .img1-container {
+  height: 450px;
+}
+.calculator-section figure.img-container .calculator-img .img1-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.calculator-section figure.img-container .calculator-img a.link-button:hover {
+  color: #F4CFA5;
+}/*# sourceMappingURL=calculator.css.map */
