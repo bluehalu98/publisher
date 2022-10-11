@@ -1,0 +1,21 @@
+footer {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 95%;
+  max-width: 500px;
+  mix-blend-mode: multiply;
+}
+footer .pencil-gif {
+  width: 50%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+footer p {
+  text-align: center;
+}
+footer .pencil-img {
+  width: 100%;
+}/*# sourceMappingURL=footer.css.map */

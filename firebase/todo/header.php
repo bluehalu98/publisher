@@ -12,13 +12,33 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/animation.css">
   <link rel="stylesheet" href="./css/scrollbar.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/register.css">
+  <link rel="stylesheet" href="./css/add.css">
+  <link rel="stylesheet" href="./css/list.css">
+  <link rel="stylesheet" href="./css/detail.css">
   <title>파이어베이스 일정관리 앱</title>
 </head>
 <body>
-  <h1>일정앱</h1>
-  <main>
-    <script type="module" defer src="./js/fbAuth.js"></script>
-    <header>
-      <?php include 'signinMenu.php' ?>
-      <?php include 'signoutMenu.php' ?>
-    </header>
+  <img class="deco-top" src="./img/common/top.png" alt="">
+  <div class="modal">
+    <div class="inner">
+      <img class="alert" src="./img/header/alert-deregister.png" alt="">
+      <p>
+        <button class="btn-yes"><img src="./img/header/btn-yes.png" alt=""></button>
+        <button class="btn-no"><img src="./img/header/btn-no.png" alt=""></button>
+      </p>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1><img src="./img/header/title-main.png" alt=""></h1>
+    <main>
+      <script type="module" defer src="./js/header.js"></script>
+      <img class="main-bg" src="./img/common/main-bg.png" alt="">
+      <img class='pin' src="./img/common/pin.png" alt="">
+      <header>
+        <?php include 'signinMenu.php' ?>
+        <?php include 'signoutMenu.php' ?>
+      </header>

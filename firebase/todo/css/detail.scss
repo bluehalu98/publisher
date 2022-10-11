@@ -1,0 +1,62 @@
+@import 'mixin';
+
+.section-detail{
+  p{
+    position: relative;
+    text-align: center;
+  }
+  div.detail-form{
+    p{
+      position: relative;
+      text-align: center;
+      margin: 7px 0;
+      input,textarea{
+        box-sizing: border-box;
+        padding: 10px;
+        &::placeholder{color: var(--main-color);}
+        border: 1px dotted var(--main-color);
+        border-radius: 7px;
+      }
+    }
+    p.date-container{
+      input{
+        width: calc(50% - 3.5px);
+        height: 50px;
+        color: var(--main-color);
+        &.add-date::-webkit-calendar-picker-indicator{
+          background-image: url(../img/list/icon-calendar.png);
+        }
+        &.add-time::-webkit-calendar-picker-indicator{
+          background-image: url(../img/list/icon-clock.png);
+        }
+      }
+    }
+    p.input-container{
+      input,textarea{
+        display: block;
+        width: 100%;
+      }
+      .icon-pencil{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      input{
+        height: 50px;
+        padding-right: 40px;
+      }
+      textarea{
+        height: 70px;
+        resize: vertical;
+      }
+    }
+  }
+  p.btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{width: 30%;}
+    a{width: 15%;}
+    img{width: 100%;}
+  }
+}

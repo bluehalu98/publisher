@@ -1,0 +1,61 @@
+section.section-list .oops {
+  width: 50%;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.section-list ul.list-container {
+  height: 60%;
+  overflow: auto;
+  margin-top: -20px;
+}
+section.section-list ul.list-container li {
+  padding: 5px 0;
+}
+section.section-list ul.list-container li p.date-container {
+  font-size: 0.8em;
+}
+section.section-list ul.list-container li p.date-container img {
+  display: inline-block;
+  vertical-align: middle;
+}
+section.section-list ul.list-container li p.date-container span:first-child {
+  color: var(--main-color);
+}
+section.section-list ul.list-container li p.date-container span:last-child {
+  color: #a8c5d2;
+}
+section.section-list ul.list-container li p.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+section.section-list ul.list-container li p.title-container span {
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+section.section-list ul.list-container li p.title-container a {
+  width: 23%;
+}
+section.section-list ul.list-container li p.title-container a img {
+  width: 100%;
+}
+section.section-list ul.list-container li .line {
+  margin-top: 5px;
+  width: 100%;
+}
+section.section-list p.btn-container {
+  height: 13%;
+  text-align: center;
+}
+section.section-list p.btn-container a {
+  display: inline-block;
+  margin-top: -10px;
+  height: 100%;
+}
+section.section-list p.btn-container a img {
+  height: 100%;
+}/*# sourceMappingURL=list.css.map */

@@ -1,0 +1,66 @@
+section.section-signin p {
+  position: relative;
+  text-align: center;
+}
+section.section-signin div.email-login-container p {
+  margin: 10px 0;
+}
+section.section-signin div.email-login-container p label:not(.login-btn-container label) {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 30px;
+}
+section.section-signin div.email-login-container p label:not(.login-btn-container label) img {
+  width: 100%;
+}
+section.section-signin div.email-login-container p #user-email, section.section-signin div.email-login-container p #user-password {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px dotted var(--main-color);
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 0 5px 0 40px;
+}
+section.section-signin div.email-login-container p #user-email::placeholder, section.section-signin div.email-login-container p #user-password::placeholder {
+  color: var(--main-color);
+}
+section.section-signin div.email-login-container .login-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.section-signin div.email-login-container .login-btn-container button {
+  width: 40%;
+}
+section.section-signin div.email-login-container .login-btn-container button img {
+  width: 100%;
+}
+section.section-signin div.email-login-container .login-btn-container input {
+  display: none;
+}
+section.section-signin div.email-login-container .login-btn-container label {
+  width: 30%;
+}
+section.section-signin div.email-login-container .login-btn-container label img {
+  width: 100%;
+}
+section.section-signin div.email-login-container .login-btn-container .checked {
+  display: none;
+}
+section.section-signin div.email-login-container .login-btn-container input:checked + label .checked {
+  display: block;
+}
+section.section-signin div.email-login-container .login-btn-container input:checked + label .check {
+  display: none;
+}
+section.section-signin .line {
+  width: 100%;
+}
+section.section-signin .google-btn {
+  width: 40%;
+}
+section.section-signin .google-btn img {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

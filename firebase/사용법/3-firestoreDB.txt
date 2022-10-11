@@ -211,9 +211,9 @@
     import {collection, doc, deleteDoc, getFirestore,writeBatch} from "firebase/firestore
     const db = getFirestore();
     const batch = writeBatch(db);
-    const querySnapshot =  getDocs(collection(db, uid)).then((querySnapshot)=>{
+    const querySnapshot =  getDocs(collection(db, '컬렉션이름')).then((querySnapshot)=>{
       querySnapshot.forEach((v) => {
-        const docRef = doc(db, uid, v.id);
+        const docRef = doc(db, '컬렉션이름', v.id);
         batch.delete(docRef);
       })//forEach
       batch.commit().then(()=>{

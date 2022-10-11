@@ -1,0 +1,23 @@
+@import 'mixin';
+
+footer{
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 95%;
+  max-width: 500px;
+  mix-blend-mode: multiply;
+  .pencil-gif{
+    width: 50%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  p{
+    text-align: center;
+  }
+  .pencil-img{
+    width: 100%;
+  }
+}

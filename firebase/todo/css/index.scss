@@ -1,0 +1,56 @@
+@import 'mixin';
+
+section.section-signin{
+  p{
+    position: relative;
+    text-align: center;
+  }
+  div.email-login-container{
+    p{
+      margin: 10px 0;
+      label:not(.login-btn-container label){
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        width: 30px;
+        img{width: 100%;}
+      }
+      #user-email,#user-password{
+        display: block;
+        width: 100%;
+        height: 50px;
+        border: 1px dotted var(--main-color);
+        border-radius: 7px;
+        box-sizing: border-box;
+        padding: 0 5px 0 40px;
+        &::placeholder{color: var(--main-color);}
+      }
+    }
+    .login-btn-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button{
+        width: 40%;
+        img{width: 100%;}
+      }
+      input{display: none;}
+      label{
+        width: 30%;
+        img{width: 100%;}
+      }
+      .checked{display: none;}
+      input:checked + label{
+        .checked{display: block;}
+        .check{display: none;}
+      }//checked 뒤에 있는 label
+    }
+  }//email container
+  .line{
+    width: 100%;
+  }
+  .google-btn{
+    width: 40%;
+    img{width: 100%;}
+  }
+}//section signin

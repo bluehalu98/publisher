@@ -1,0 +1,65 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(255, 204, 3, 0.7);
+}
+.modal .inner {
+  width: 80%;
+  max-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .inner .alert {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.modal .inner p {
+  display: flex;
+  justify-content: space-between;
+}
+.modal .inner p button {
+  width: 20%;
+  margin: 0 20px;
+}
+.modal .inner p button img {
+  width: 100%;
+}
+
+header {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  height: 15%;
+  width: 85%;
+}
+header nav {
+  display: none;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav p {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 0.8em;
+  color: #5fbeee;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-image: url(../img/header/user-info-bg.png);
+  background-size: 100% 100%;
+}
+header nav a, header nav button {
+  width: 50px;
+}
+header nav a img, header nav button img {
+  width: 100%;
+}/*# sourceMappingURL=header.css.map */

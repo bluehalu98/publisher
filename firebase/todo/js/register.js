@@ -32,8 +32,17 @@ export const fnSignOut = () => {
 }
 
 $('.reg-btn').click(async ()=>{
-  let email = $('#reg-email').val()
-  let password = $('#reg-password').val()
+  let email = $('.reg-email').val()
+  let password = $('.reg-password').val()
+  let passwordCheck = $('.reg-password-check').val()
+  if(!email|| !password||!passwordCheck){
+    alert('모든 항목을 채워주세요')
+    return false
+  }
+  if(password!==passwordCheck){
+    alert('비밀번호가 일치하지 않습니다')
+    return false
+  }
   let user = await fnRegister(email, password)
   await fnSendEmail(user)
   await fnSignOut()

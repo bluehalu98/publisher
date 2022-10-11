@@ -1,0 +1,34 @@
+@import 'mixin';
+
+section.section-register{
+  p{
+    position: relative;
+    text-align: center;
+  }
+  .register-form{
+    p{
+      margin: 10px 0;
+      label{
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        width: 30px;
+        img{width: 100%;}
+      }
+      input{
+        display: block;
+        width: 100%;
+        height: 50px;
+        border: 1px dotted var(--main-color);
+        border-radius: 7px;
+        box-sizing: border-box;
+        padding: 0 5px 0 40px;
+        &::placeholder{color: var(--main-color);}
+      }
+    }
+  }
+  .reg-btn{
+    width: 60%;
+    img{width: 100%;}
+  }
+}

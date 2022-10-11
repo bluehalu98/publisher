@@ -1,5 +1,15 @@
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, deleteUser } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
-import { fnSignOut } from "./fbRegister.js";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, deleteUser, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+
+const fnSignOut = () => {
+  return new Promise(res=>{
+    const auth = getAuth();
+    signOut(auth).then(() => {
+      res()
+    }).catch((error) => {
+      alert(error.message)
+    });
+  })
+}
 
 export const fnSignIn = (email, password) => {
   return new Promise(res=>{
@@ -27,6 +37,16 @@ const fnGoogleSignin = () => {
   })
 }
 
+const fnRedirection = () =>{
+  const auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      location.href='./list.php'
+    }
+  });
+}
+fnRedirection()//로그인되어있으면 리스트로 이동
+
 $('input.remember').change(()=>{
   let checked = $('.remember').prop('checked')
   if(checked){
@@ -38,6 +58,10 @@ $('input.remember').change(()=>{
 $('.section-signin .login-btn').click(async ()=>{
   let email = $('#user-email').val()
   let password = $('#user-password').val()
+  if(!email||!password){
+    alert('아이디와 비밀번호를 입력하세요')
+    return false
+  }
   let user = await fnSignIn(email, password)
   if(!user.emailVerified){
     await fnSignOut()

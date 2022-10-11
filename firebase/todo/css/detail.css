@@ -1,0 +1,60 @@
+.section-detail p {
+  position: relative;
+  text-align: center;
+}
+.section-detail div.detail-form p {
+  position: relative;
+  text-align: center;
+  margin: 7px 0;
+}
+.section-detail div.detail-form p input, .section-detail div.detail-form p textarea {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px dotted var(--main-color);
+  border-radius: 7px;
+}
+.section-detail div.detail-form p input::placeholder, .section-detail div.detail-form p textarea::placeholder {
+  color: var(--main-color);
+}
+.section-detail div.detail-form p.date-container input {
+  width: calc(50% - 3.5px);
+  height: 50px;
+  color: var(--main-color);
+}
+.section-detail div.detail-form p.date-container input.add-date::-webkit-calendar-picker-indicator {
+  background-image: url(../img/list/icon-calendar.png);
+}
+.section-detail div.detail-form p.date-container input.add-time::-webkit-calendar-picker-indicator {
+  background-image: url(../img/list/icon-clock.png);
+}
+.section-detail div.detail-form p.input-container input, .section-detail div.detail-form p.input-container textarea {
+  display: block;
+  width: 100%;
+}
+.section-detail div.detail-form p.input-container .icon-pencil {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.section-detail div.detail-form p.input-container input {
+  height: 50px;
+  padding-right: 40px;
+}
+.section-detail div.detail-form p.input-container textarea {
+  height: 70px;
+  resize: vertical;
+}
+.section-detail p.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-detail p.btn-container button {
+  width: 30%;
+}
+.section-detail p.btn-container a {
+  width: 15%;
+}
+.section-detail p.btn-container img {
+  width: 100%;
+}/*# sourceMappingURL=detail.css.map */

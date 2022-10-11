@@ -1,0 +1,34 @@
+section.section-register p {
+  position: relative;
+  text-align: center;
+}
+section.section-register .register-form p {
+  margin: 10px 0;
+}
+section.section-register .register-form p label {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 30px;
+}
+section.section-register .register-form p label img {
+  width: 100%;
+}
+section.section-register .register-form p input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px dotted var(--main-color);
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 0 5px 0 40px;
+}
+section.section-register .register-form p input::placeholder {
+  color: var(--main-color);
+}
+section.section-register .reg-btn {
+  width: 60%;
+}
+section.section-register .reg-btn img {
+  width: 100%;
+}/*# sourceMappingURL=register.css.map */
