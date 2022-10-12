@@ -19,7 +19,7 @@
           개발언어 : php, html, css, jquery <br>
         </dd>
         <dt>개발일자</dt>
-        <dd>22.00.00~22.00.00</dd>
+        <dd>22.06.20~22.07.08</dd>
         <dt>테마컬러</dt>
         <dd>
           #bbb1a6 <b class="color-bbb1a6"></b> / 

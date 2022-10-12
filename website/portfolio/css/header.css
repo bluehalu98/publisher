@@ -24,6 +24,12 @@ header div.header-top h1 {
   font-size: 3em;
   letter-spacing: 30px;
 }
+@media screen and (max-width: 650px) {
+  header div.header-top h1 {
+    font-size: 6.5vw;
+    letter-spacing: 10px;
+  }
+}
 header div.header-top figure.img-container {
   width: 200px;
   height: 200px;

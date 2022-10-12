@@ -17,7 +17,7 @@
           CMS : wordpress
         </dd>
         <dt>개발일자</dt>
-        <dd>22.00.00~22.00.00</dd>
+        <dd>22.07.11~22.07.29</dd>
         <dt>테마컬러</dt>
         <dd>
           #f9bf26 <b class="color-f9bf26"></b> / 

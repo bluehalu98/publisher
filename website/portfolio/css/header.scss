@@ -20,6 +20,10 @@ header{
       font-weight: 900;
       font-size: 3em;
       letter-spacing: 30px;
+      @media screen and (max-width:650px) {
+        font-size: 6.5vw;
+        letter-spacing: 10px;
+      }
     }//h1
     figure.img-container{
       width: 200px;

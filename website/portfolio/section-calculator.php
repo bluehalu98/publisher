@@ -14,7 +14,7 @@
           framework : react
         </dd>
         <dt>개발일자</dt>
-        <dd>22.00.00~22.00.00</dd>
+        <dd>22.09.19~22.09.26</dd>
         <dt>개발의도</dt>
         <dd>
           nodeJS와 create-react-app을 이용하여 개발환경을 구축하고, 컴포넌트를 구조화하여 화면을 설계하는 방식,

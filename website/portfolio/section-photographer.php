@@ -16,7 +16,7 @@
           개발언어 : php, html, jquery, scss <br>
         </dd>
         <dt>개발일자</dt>
-        <dd>22.00.00~22.00.00</dd>
+        <dd>22.08.08~22.08.26</dd>
         <dt>테마컬러</dt>
         <dd>
           #27AE60 <b class="color-27AE60"></b> /
@@ -25,8 +25,8 @@
         </dd>
         <dt>개발의도</dt>
         <dd>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          php 개발환경의 이해를 기반으로 팀원들과 각자의 분담과 협업을 깃허브를 통하여 데이터를 관리하는
+          방법 및 주의사항, 협업시의 개발환경 구축, 페이지의 구성방식 등을 습득하는 데 목적을 둠 
         </dd>
       </dl>
     </figcaption>
