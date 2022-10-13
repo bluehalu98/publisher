@@ -41,6 +41,9 @@ header div.header-top figure.img-container div.portrait {
   background-color: #555;
   margin-bottom: 80px;
 }
+header div.header-top figure.img-container div.portrait img {
+  width: 100%;
+}
 header div.header-top figcaption dl {
   padding: 0 25% 0 15%;
   display: flex;

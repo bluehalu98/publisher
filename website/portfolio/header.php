@@ -32,7 +32,9 @@
     <div class="header-top">
       <h1>PORTFOLIO</h1>
       <figure class="img-container">
-        <div class="portrait"></div>
+        <div class="portrait">
+          <img src="./img/profile.jpg" alt="">
+        </div>
       </figure>
       <figcaption>
           <dl>

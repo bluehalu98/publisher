@@ -39,6 +39,7 @@ section.section-list ul.list-container li p.title-container span {
 }
 section.section-list ul.list-container li p.title-container a {
   width: 23%;
+  margin-right: 5px;
 }
 section.section-list ul.list-container li p.title-container a img {
   width: 100%;
