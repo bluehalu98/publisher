@@ -1,0 +1,46 @@
+/* agent style reset */
+*{
+  /* all : unset 모든 설정을 초기화(권장x) */
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+input, textarea, select{/* button은 기본적으로 border-box설정이 되어있음 */
+  box-sizing: border-box;
+}
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+table{
+  /* border-spacing: 0;는 collapse설정이 되어있으면 필요없음 */
+  border-collapse: collapse;
+}
+img, iframe{
+  display: block;
+}
+iframe{
+  border: none;
+}
+.hidden{
+  position: fixed;
+  left: -100000px;
+}
+/* 
+------------------기본 레이아웃을 위한 기초 설정(css reset)------------------ 
+웹브라우저에서 제공하는 agent style(기본 스타일)을 제거해서 디자인하기 위해서
+
+웹 디자인시 스타일 가이드를 준수해야함(테마 색, 테마 분위기, 테마 통일등등)
+*/

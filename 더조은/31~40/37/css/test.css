@@ -1,0 +1,29 @@
+body{
+  padding:100px;
+  box-sizing: border-box;
+}
+.fixed{
+  position: fixed;
+  background-color: red;
+}
+.box{
+  width: 50px;
+  height: 50px;
+}
+.horz{
+  width: 100%;
+  height: 25px;
+}
+.vert{
+  width: 25px;
+  height: 100%;
+}
+.blt{left: 0;top: 0;}
+.blb{left: 0;bottom: 0;}
+.brt{right:0;top: 0;}
+.brb{right: 0;bottom: 0;}
+
+.rt{left:0;top: 0;}
+.rb{left:0;bottom: 0;}
+.rl{top:0;left: 0;}
+.rr{top:0;right: 0;}

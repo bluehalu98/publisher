@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+*{font-family:"맑은 고딕";font-size:15px;font-weight:normal;}
+h1{margin:13px 0;font-weight:bold;background:black;color:white;padding:10px;}
+p b{text-decoration:underline;font-weight:bold}
+textarea{width:500px;}
+</style>
+</head>
+
+<body>
+<h1>제시된 조건을 준수해 문법의 오류를 수정 후, 오류의 원인을 기술하시오</h1>
+
+<div>
+	<p>1. span, h2, p 객체중 <b>하나의 요소만 제거</b>해서 오류를 수정할 것.</p>
+    <!--문제-->
+	<span><h2>Lorem Ipsum</h2></span>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> span이라는 인라인 태그안에 블럭요소가 들어가서</textarea>
+</div>
+<hr>
+
+<div>
+	<p>2. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것.</p>
+    <!--문제-->
+    <span><p><div>Lorem Ipsum</div></p></span>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> 인라인태그인 span태그 안에 블럭태그 p태그는 자식으로 허용되지 않는다 <br> p태그는 블럭레벨인 div를 자식으로 사용하지 않는다</textarea>
+</div>
+<hr>
+
+
+<div>
+	<p>3. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것.</p>
+    <!--문제-->
+    <ul>
+        <a href="#"><li>list</li></a>
+    </ul>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> ul의 직계자식으로는 li만 허용한다</textarea>
+</div>
+<hr>
+
+<div>
+	<p>4. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것</p>
+    <!--문제-->
+	<img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt>
+    	<a href="">link</a>
+    </img>
+    <!--문제끝-->
+    <br>
+    <textarea>오류의 원인을 기술하시오 <br> img태그는 닫는 태그가 없다</textarea>
+</div>
+<hr>
+
+<div>
+	<p>5. p, a, span, button객체중 <b>하나의 요소만 제거</b>해서 오류를 수정할 것.</p>
+    <!--문제-->
+    <p><a href="#"><span><button>Link</button></span></a></p>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> 인터렉티브 요소인 a와 button은 서로 부모자식관계로 사용할 수 없다</textarea>
+</div>
+<hr>
+
+
+<div>
+	<p>6. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것</p>
+    <!--문제-->
+	<img src="" alt="">
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> img태그의 src속성에는 값이 있어야한다</textarea>
+</div>
+<hr>
+<div>
+	<p>7. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것</p>
+    <!--문제-->
+    <a href="#">
+   	<ul>
+	    <li><img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png"></li>
+    </ul>
+    </a>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> img태그에는 alt속성이 반드시 있어야한다</textarea>
+</div>
+<hr>
+
+<div>
+	<p>8. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것</p>
+    <!--문제-->
+    <form>
+    	<label><input type="phone" maxlength="9" placeholder="input"></label>
+    </form>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> phone이라는 타입은 존재하지않는다</textarea>
+</div>
+<hr>
+
+<div>
+	<p>9. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것</p>
+    <!--문제-->
+    <div><p><a href="#" title="" value="">Anchor</a></p></div>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> value속성은 폼요소에만 사용한다</textarea>
+</div>
+<hr>
+
+<div>
+	<p>10. <b>객체를 추가하거나 제거하지 말고</b> 오류를 수정할 것</p>
+    <!--문제-->
+    <div>
+        <h3>조건문의문법</h3>
+        <b>if(1>0)</b>{alert("참")}
+    </div>
+    <!--문제끝-->
+    <textarea>오류의 원인을 기술하시오 <br> 이스케이핑 오류 (&amp;gt;를 사용해야한다)</textarea>
+</div>
+
+</body>
+</html>

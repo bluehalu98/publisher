@@ -1,0 +1,40 @@
+.ex1 button{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.ex1 button.active{
+  background-color: black;
+  color: white;
+}
+.answer{
+  display: none;
+}
+.box{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.ex6 .box1,
+.ex6 .box2,
+.ex6 .box3{
+  display: none;
+}
+.btn1.red{
+  color: red;
+}
+.btn2.blue{
+  color: blue;
+}
+.btn3.green{
+  color: green;
+}
+.btn4.yellow{
+  color: yellow;
+}
+.btn5.purple{
+  color: purple;
+}

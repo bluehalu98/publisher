@@ -1,0 +1,150 @@
+main{
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section.feature{
+  padding: 30px 0;
+}
+section.feature ul li img{
+  width: 100%;
+}
+main section.feature ul li h3{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main section.feature ul li em{
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+main section.feature ul li p{
+  margin-bottom: 15px;
+}
+@media screen and (min-width:1000px){
+  section.feature ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  section.feature ul li{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  section.feature ul li p{
+    flex: 1;
+  }
+}
+@media screen and (max-width:1000px){
+  section.feature ul li{
+    margin-bottom: 20px;
+  }
+  section.feature ul li:last-child{
+    margin-bottom: 0;
+  }
+}
+
+section.ci{
+  padding: 50px 0;
+  background-color: #ddd;
+}
+section.ci ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+section.ci ul li{
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+section.ci ul li i{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-color: #333;
+  color: white;
+  line-height: 70px;
+  border-radius: 50%;
+}
+section.ci ul li h3{
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+@media screen and (min-width:1000px){
+  section.ci ul li{
+    width: 25%;
+  }
+}
+@media screen and (min-width:500px) and (max-width:1000px){
+  section.ci ul li{
+    width: 50%;
+  }
+}
+@media screen and (max-width:500px){
+  section.ci ul li{
+    width: 100%;
+  }
+}
+
+section.latest{
+  padding: 50px 0;
+}
+@media screen and (min-width:500px){
+  section.latest ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  section.latest ul li{
+    width: 47%;
+  }
+}
+@media screen and (max-width:500px){
+  section.latest ul li{
+    margin-bottom: 30px;
+  }
+  section.latest ul li:last-child{
+    margin-bottom: 0;
+  }
+}
+section.latest ul li h3{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+section.latest ul li em{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+@media screen and (min-width:1000px){
+/*  
+부모 ul이 플렉스가 적용되서 li는 일반 블록레벨속성이 사라졌음 
+그러므로 클리어 픽스를 적용하지 않아도 된다
+  section.latest ul li{
+    content:'';
+    display:block;
+    clear:both;
+  } 
+*/
+  section.latest ul li h3{
+    margin-bottom: 15px;
+  }
+  section.latest ul li img{
+    width: 35%;
+    float: left;
+  }
+  section.latest ul li em, section.latest ul li p{
+    width: 60%;
+    float: right;
+  }
+}
+@media screen and (max-width:1000px){
+  section.latest ul li em{
+    display: block;
+    margin: 15px 0;
+  }
+  section.latest ul li img{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

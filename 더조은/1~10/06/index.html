@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 300px;
+      height: 300px;
+    }
+    .box > div{
+      width: 200px;
+      height: 200px;
+      background: green;
+    }
+    .box div div{
+      width: 100px;
+      height: 100px;
+    }
+    .box1{
+      background: red;
+    }
+    .box2{
+      background: blue;
+    }
+    .box1 div div{
+      background:yellow;
+    }
+    .box2 div div{
+      background: black;
+    }
+    .container{
+      background-color: black;
+      width: 200px;
+      height: 200px;
+    }
+
+    .container div{
+      width: 100px;
+      height: 100px;
+    }
+
+    .container1 div{
+      background: red;
+    }
+    .container2 div{
+      background: blue;
+    }
+    .wrap1{
+      width: 200px;
+      height: 200px;
+      background: red;
+    }
+    .wrap2{
+      width: 300px;
+      height: 300px;
+      background-color: blue;
+    }
+    .wrap1 div , .wrap2 div{
+      width: 100px;
+      height: 100px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>다양한 css 선택자</h1>
+  <ul>
+    <li>다중호출 : class속성에 여백을 이용해서 클래스 네임을 호출</li>
+    <li>자손선택자 : 선택자를 여백을 이용해서 연결</li>
+    <li>자식선택자 : &gt;를 이용해서 연결</li>
+    <li>연결선택자 : 콤마기호를 이용해서 연결</li>
+    <li></li>
+  </ul>
+  <hr>
+  <div class="box box1">
+    <div>
+      <div></div>
+    </div>
+  </div> 
+  <br>
+  <div class="box box2">
+    <div>
+      <div></div>
+    </div>
+  </div>
+  <br>
+  <div class="container container1">
+    <div></div>
+  </div>
+  <br>
+  <div class="container container2">
+    <div></div>
+  </div>
+  <hr>
+  <div class="wrap1">
+    <div></div>
+  </div>
+  <br>
+  <div class="wrap2"> 
+    <div></div>
+  </div>
+  <hr>
+<!-- 
+  1. .ex div > div에 해당되는 객체의 수는?
+    2개
+  2. 가장안쪽의 박스 2개를 선택할 수 있는 모든 선택자를 작성해보세요
+    .ex>div>div, .ex>div div, .ex div>div, .ex div div
+
+ -->
+
+  <div class="ex">
+    <div>
+      <div></div>
+    </div>
+  </div>
+  <div class="ex">
+    <div>
+      <div></div>
+    </div>
+  </div>
+
+ 
+  
+</body>
+</html>

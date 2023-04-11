@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>margin과 padding</h1>
+  <p>margin은 객체의 거리, padding은 객체의 여백</p>
+  <ul>
+    <li>첫번째 block요소(바닐라상태)는 margin-top 적용이 되지않음</li>
+    <li>
+      padding과 border는 객체의 바깥쪽으로 적용됨<br>
+      box-sizing:border-box : 객체의 안쪽영역으로 적용
+    </li>
+    <li>인라인요소는 padding을 적용하면 안된다</li>
+    <li>블럭레벨의 상하 마진은 중첩된다(인라인은 중첩 x)</li>
+  </ul>
+  <hr>
+  <div class="container1">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class=""></div>
+  </div>
+  <hr>
+  <div class="container2">
+    <div class="">
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+  </div>
+  <div class="container3">
+    <span>span</span>
+    <span>span</span>
+  </div>
+  <hr>
+  <div class="container4">
+    <div class="">div1</div>
+    <div class="">div2</div>
+    <span>span1</span>
+    <span>span2</span>
+  </div>
+  <hr>
+  <div class="container5">
+    <div>
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+    <div>
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+  </div>
+</body>
+</html>

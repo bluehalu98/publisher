@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.ex1 button').click(function(){
+        var num1 = Number($('.ex1 .num1').val())
+        var num2 = Number($('.ex1 .num2').val())
+        var result = num1 + num2
+        alert(result)
+      })
+      $('.ex2 button').click(function(){
+        /*
+        var num1 = $('.ex2 .num1').val()
+        var num2 = $('.ex2 .num2').val()
+        var num3 = parseInt(num1/num2)
+        var result = num1-num2*num3
+        alert(result)
+        */
+        var num1 = $('.ex2 .num1').val()
+        var num2 = $('.ex2 .num2').val()
+        var result = num1%num2
+        alert(result)
+      })
+      $('.ex3 button').click(function(){
+        var num1 = $('.ex3 .num1').val()
+        var num2 = $('.ex3 .num2').val()
+        var result = (parseInt((num1/num2)*100))/100
+        alert(result)
+      })
+    })
+  </script>
+</head>
+<body>
+  <div class="ex1">
+    <p>1. 더하기 예제</p>
+    <input class="num1" type="text"> +
+    <input class="num2" type="text"> =
+    <button>결과보기</button>
+  </div>
+  <div class="ex2">
+    <p>2. 나머지 예제</p>
+    <input class="num1" type="text"> 나누기
+    <input class="num2" type="text"> 의 나머지
+    <button>결과보기</button>
+  </div>
+  <hr>
+  <div class="ex3">
+    <p>3. 나누기 예제 (소수점 2자리까지만 출력하기)</p>
+    <input class='num1' type="text">
+    /
+    <input class="num2" type="text">
+    =
+    <button>결과보기</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>table을 이용한 자료식 구현</h1>
+  <p>자료구조를 구축하기 위한 요소</p>
+  <hr>
+  <h2>table 제작</h2>
+  <ul>
+    <li>table(block레벨과 유사), tr(table rows), td(cell)</li>
+    <li>모든 줄의 cell의 갯수는 동일해야 한다</li>
+    <li>fieldset의 넓이는 동일하다</li>
+    <li>table에 넓이가 적용되었을 경우 모든 td에 넓이(px)를 지정하지 않는다</li>
+    <li>모든 td에 넓이(px)가 적용되었을 경우 table에는 넓이를 지정하지 않는다</li>
+    <li>table에는 높이를 지정하지 말것</li>
+    <li>td의 vertical-align속성은 cell안의 글자 수직 위치를 결정</li>
+    <li>
+      cell의 병합 <br>
+      - colspan, rowspan <br>
+      - 병합된 cell에는 크기를 지정하지 말것
+    </li>
+  </ul>
+  <table class="table1">
+    <tr>
+      <td>td1</td>
+      <td>td2</td>
+    </tr>
+    <tr>
+      <td>td1</td>
+      <td>td2</td>
+    </tr>
+  </table>
+  <hr>
+  <table class="table2">
+    <tr>
+      <td colspan="2" class="sideway">td1</td>
+      <!--<td>td2</td> -->
+      <td rowspan="2" class="rtb">td3</td>
+    </tr>
+    <tr>
+      <td rowspan="2">td1</td>
+      <td>td2</td>
+      <!--<td>td3</td> -->
+    </tr>
+    <tr>
+      <!-- <td>td1</td> -->
+      <td colspan="2">td2</td>
+      <!-- <td>td3</td> -->
+    </tr>
+  </table>
+  <hr>
+  <table class="table3">
+    <tr>
+      <td rowspan="9" class="seme"><b>분기별실적</b></td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td colspan="9" class="row2"></td>
+    </tr>
+    <tr class="firstRow">
+      <td class="firstS"><b>1분기</b></td>
+      <td colspan="2"></td>
+      <td colspan="6"></td>
+    </tr>
+    <tr>
+      <td colspan="9"></td>
+    </tr>
+    <tr class="secondRow">
+      <td class="firstS"><b>2분기</b></td>
+      <td colspan="4"></td>
+      <td colspan="4"></td>
+    </tr>
+    <tr>
+      <td colspan="9"></td>
+    </tr>
+    <tr class="thirdRow">
+      <td class="firstS"><b>3분기</b></td>
+      <td colspan="6"></td>
+      <td colspan="2"></td>
+    </tr>
+    <tr>
+      <td colspan="9"></td>
+    </tr>
+    <tr class="fourthRow">
+      <td class="firstS"><b>4분기</b></td>
+      <td colspan="8"></td>
+    </tr>
+  </table>
+  <hr>
+  <table class="table4">
+    <tr>
+      <td colspan="9"><b>분기별 매출 실적</b></td>
+    </tr>
+    <tr class="firstRow">
+      <td>8</td>
+      <td rowspan="9"></td>
+      <td rowspan="6"></td>
+      <td rowspan="9"></td>
+      <td rowspan="4"></td>
+      <td rowspan="9"></td>
+      <td rowspan="2"></td>
+      <td rowspan="9"></td>
+      <td rowspan="8" class="red"></td>
+    </tr>
+    <tr class="secondRow">
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td rowspan="6" class="red"></td>
+    </tr>
+    <tr>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td rowspan="4" class="red"></td>
+    </tr>
+    <tr>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td rowspan="2" class="red"></td>
+    </tr>
+    <tr>
+      <td>1</td>
+    </tr>
+    <tr class="lastRow">
+      <td></td>
+      <td><b>1분기</></td>
+      <td><b>2분기</></td>
+      <td><b>3분기</></td>
+      <td><b>4분기</></td>
+    </tr>
+  </table>
+</body>
+</html>

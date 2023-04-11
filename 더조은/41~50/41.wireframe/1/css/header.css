@@ -1,0 +1,50 @@
+header{
+  width: 650px;
+  height: 45px;
+  margin: 10px auto;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1{
+  height: 45px;
+}
+h1 img{
+  height: 100%;
+}
+header nav a{
+  margin: 0 3px
+}
+header nav a:hover{
+  text-decoration: underline;
+  color: #222;
+}
+nav.gnb{
+  width: 650px;
+  height: 30px;
+  margin: 10px auto;
+  background-color: #ccc;
+}
+nav.gnb>ul{
+/* 
+  main 메뉴에는 복잡한 형식의 메뉴를 설정할 경우가 있기때문에 inline-block
+  으로 설정하기보다는 flex를 이용한다
+*/
+/*   height: 100%; */
+  display: flex;
+  justify-content: center;
+}
+/* nav.gnb>ul>li{
+  height: 100%;
+} */
+nav.gnb>ul>li>a{
+  display: block;
+  line-height: 30px;
+  height: 100%;
+  padding: 0 20px;
+}
+nav.gnb>ul>li>a:hover{
+  background-color: black;
+  color:#fff
+}

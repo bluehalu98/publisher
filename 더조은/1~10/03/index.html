@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> /* css 언어만 적어야함 */
+    body{
+      color: gray;
+      background-color: rgb(235, 235, 122);
+    }
+
+    h1{
+      color: black;
+    }
+
+    h2{
+      color: blue;
+    }
+
+    .green{
+      color:green;
+    }
+
+    #pink{
+      color: pink;
+    }
+
+    .red{
+      color:red;
+    }
+
+    .blue{
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1><span class="red">C</span><span class="blue">S</span><span class="green">S</span> 개념</h1>
+  <p>
+    <i>cascading style sheet</i>의 약자로 웹문서의 디자인을 처리하는 언어임 <br>
+    cascading -&gt; 폭포수, 우선순위가 있다
+  </p>
+  <hr>
+  <h2>특징과 주의사항</h2>
+  <ul>
+    <li>
+      우선순위(cascading)가 존재함<br>
+      인라인스타일  &gt; ID 선택자 &gt; 클래스 선택자 &gt; 자손 &gt; 부모 
+    </li>
+    <li>상속성(inherit)을 가지고 있음(상속이 되는 속성과 되지 않는 속성이 존재함)
+    </li>
+    <li>
+      head요소안에서 style요소를 선언후 선택자{속성:값} 형태로 작성한다
+    </li>
+  </ul>
+  <hr>
+  <h2 class="green" id="pink">선택자(selector)</h2>
+  <ul>
+    <li>
+      태그 선택자(type selector) <br>
+      태그명{속성:속성값; 속성:속성값; 속성:속성값}
+    </li>
+    <li class="green">
+      클래스 선택자(class selector) <br>
+      .클래스이름{속성:속성값;}방법으로 선언후 html요소에서 class속성으로 호출 <br>
+      반복호출(재사용)이 가능하고 수정관리가 용이함
+    </li>
+    <li>
+      ID 선택자(ID selector) <br>
+      #ID이름{속성:속성값;}방법으로 선언후 html요소에서 ID속성으로 호출 <br>
+      동일한 ID는 사용할 수 없음
+    </li>
+    <li style="color:brown;">
+      inline style <br>
+      html요소의 style속성을 추가해서 한줄로 속성과 값을 설정 <br>
+      수정관리가 매우 비효율적임, 자바스크립트를 이용해 css를 변경할 경우 사용됨
+    </li>
+  </ul>
+</body>
+</html>

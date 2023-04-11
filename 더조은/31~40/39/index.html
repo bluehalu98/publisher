@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>변형과 애니메이션</h1>
+  <hr>
+  <h2>transition</h2>
+  <ul>
+    <li>css속성이 변하는 과정에 시간을 설정</li>
+    <li>:hover에 적용할 경우 hover시에만 트랜지션이 적용됨(hover해제시 적용 x)</li>
+    <li>
+      모든효과에 동시에 적용시 <br>
+      transition : all 초s       
+    </li>
+    <li>
+      딜레이 모션 구현시 <br>
+      transition : 속성1 초s, 속성2 초s, 속성3 초s ....; <br>
+      transition-delay: 초s, 초s, 초s .....;
+    </li>
+  </ul>
+  <div class="ex1">
+    <button class="btn1">버튼</button>
+    <button class="btn2">버튼</button>
+  </div>
+  <div class="ex2">div</div>
+  <br>
+  <div class="ex3">div</div>
+  <hr>
+  <h2>keyframe, animation</h2>
+  <ul>
+    <li>반복적이거나, 다양한 모션을 구현시 사용</li>
+    <li>transition과 달리 모션의 전환시 끊김현상이 발생</li>
+    <li>@keyframes로 모션을 설정후 해당요소에서 animation속성으로 호출</li>
+    <li>
+      animation속성,
+      animation-name : key frames이름
+      animation-duration : 시작에서 끝까지 한번 진행되는 시간
+      animation-iteration-count :반복횟수
+      animation-time-function :등감가속도설정
+      animation-delay: 시작지연시간
+    </li>
+  </ul>
+  <button class="ex4">버튼</button>
+  <button class="ex5">버튼</button>
+  <div class="ex6">
+    <button class="btn1">1</button>
+    <button class="btn2">2</button>
+    <button class="btn3">3</button>
+  </div>
+  <hr>
+  <h2>transform</h2>
+  <ul>
+    <li>
+      실제 레이아웃에는 영향을 주지 않는다
+    </li>
+    <li>
+      translate : 위치변형 <br>
+      %단위 기준은 해당 요소 기준
+    </li>
+    <li>
+      rotate : 회전 <br>
+      +는 시계방향, -는 반시계방향
+    </li>
+    <li>
+      scale : <br>
+      단위가 배율임
+    </li>
+    <li>
+      transform-origin : 수평축 수직축 <br>
+      translate속성에는 영향을 주지 않는다
+    </li>
+  </ul>
+
+  <div class="ex7">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <br>
+  <div class="ex8">ex8 translate 연습하기</div>
+  <br>
+  <hr>
+  <div class="ex9">
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</button>
+    <button>btn4</button>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

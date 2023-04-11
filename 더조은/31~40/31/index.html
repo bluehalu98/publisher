@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>float</h1>
+  <p>정확하고 다양한 레이아웃을 구현</p>
+  <ul>
+    <li>
+      float이 적용되면 디스플레이 레벨 성격이 사라진다 <br>
+      block레벨의 경우 기본 넓이가 사라짐, margin의 auto값 적용 안됨 <br>
+      inline레벨의 경우 크기나 padding도 적용할 수 있음 <br>
+    </li>
+    <li>
+      clear fix : <br>
+      float이 적용된 자식객체의 높이를 부모컨테이너가 인식할 수 있도록 <br>
+      css 가상엘리먼트를 설정하는 방법
+    </li>
+    <li>
+      float객체의 다음객체(next sibiling)는 반드시 float와 clear중 하나를 선택해야 함
+    </li>
+    <li>
+      float이 적용된 요소들만 margin-top이 적용됨
+    </li>
+    <li></li>
+  </ul>
+  <hr>
+  <div class="ex1">
+    <div class="sBox box1">1</div>
+    <div class="sBox box2">2</div>
+    <div class="sBox box3">3</div>
+    <div class="sBox box4">4</div>
+    <div class="sBox box5">5</div>
+    <div class="sBox box6">6</div>
+    <div class="sBox box7">7</div>
+    <div class="wBox box8">8</div>
+    <div class="wBox box9">9</div>
+    <!-- 가상엘리먼트 -->
+  </div>
+  <hr>
+  <div class="ex2">
+    <div class="wBox box1"><b>DIV1</b></div>
+    <div class="sBox box2"><b>DIV2</b></div>
+    <div class="sBox box3"><b>DIV3</b></div>
+    <div class="sBox box4"><b>DIV4</b></div>
+    <div class="wBox box5"><b>DIV5</b></div>
+    <div class="sBox box6"><b>DIV6</b></div>
+    <div class="sBox box7"><b>DIV7</b></div>
+    <div class="sBox box8"><b>DIV8</b></div>
+  </div>
+  <hr>
+</body>
+</html>
