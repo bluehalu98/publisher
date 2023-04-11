@@ -1,7 +1,0 @@
-li{
-  list-style: none;
-}
-ul.hobby li::before{
-  content:'·'
-
-}
